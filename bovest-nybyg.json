@@ -1,0 +1,1923 @@
+{
+  "id": "f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e",
+  "name": "BO-VEST Nybyg",
+  "shortName": "Nybyg",
+  "group": "bovest",
+  "description": "BO-VEST bæredygtighedsmanual - et værktøj der hjælper til at indtænke, stille spørgsmål, krav og samtænke på tværs af projektets aktører og sikre et bæredygtigt byggeri.",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "date": "2025-10-18T18:11:56.511Z",
+      "themes": [
+        {
+          "options": {
+            "hideCodeInReport": true,
+            "hideFromBreadcrumbs": true,
+            "hideFromDocumentTree": true
+          },
+          "type": "theme",
+          "title": "Det Sociale",
+          "longFormTitle": "Det Sociale",
+          "code": "DS",
+          "style": {
+            "primaryColor": "#d96552",
+            "secondaryColor": "#e49386"
+          },
+          "sortOrder": 0,
+          "items": [
+            {
+              "code": "DS1",
+              "longFormTitle": "Livet mellem naboer",
+              "options": {
+                "hideCodeInReport": true,
+                "hideFromBreadcrumbs": true,
+                "hideFromDocumentTree": true,
+                "criteriaTreeElementTextFormat": ":title:"
+              },
+              "title": "Livet mellem naboer",
+              "type": "criterion",
+              "sortOrder": 0,
+              "items": [
+                {
+                  "type": "task-group",
+                  "code": "DS1.1",
+                  "title": "Livet mellem naboer",
+                  "longFormTitle": "Livet mellem naboer",
+                  "sortOrder": 0,
+                  "items": [
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "01",
+                      "title": "Det naturlige møde - fællesskab og naboskabskultur",
+                      "longFormTitle": "Det naturlige møde - fællesskab og naboskabskultur",
+                      "sortOrder": 0,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 16)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=16"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Planudsnit / fotodokumentation, og beskrivelser i tekst."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "01.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er etableret 1-2 typer af rumlige situationer/ arkitektoniske løsninger, som inviterer til naturlige møder mellem beboerne og som understøtter fællesskabet i det daglige.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "I tillæg hertil er der attraktive og inviterende stueetager og kantzoner. Gode kantzoner aktiverer uderummets kant, og hvor det er muligt skabes der plads til naturligt ophold.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Derudover kan der identificeres mindst 3 invitationer til naturligt møde mellem beboerne, som understøtter forskellige grader af fællesskab.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nGode boligområder med en høj grad af fællesskab starter med naturlige møder mellem beboerne i dagligdagen. Naturlige og uformelle møder er, når man mødes tilfældigt v. postkassen, i vaskekælderen, indgangspartiet med en bænk, grønne kantzoner langs stuetagen, nicher med gode\nsolforhold osv. Der er en bred palette af \"tricks\" til at sikre naturlige møder. Det naturlige møde hænger sammen med bebyggelsens arkitektoniske kvalitet. Det sociale understøttes igennem en særlig opmærksomhed i bygningernes og uderummets fysiske udformning. Det naturlige møde kan skabes, så det understøtter både mødet mellem naboer, det mindre fællesskab i opgangen og det større fællesskab i bebyggelsen. Det gode projekt har fokus på alle\nskalatrin.<br><br><strong>Arkitektonisk kvalitet</strong><br>En omsorgsfuld arkitektur med inviterende kantzoner, fine nicher, indgangspartier med plads til at mødes. Nødvendige aktiviteter og ganglinjer placeres så man naturligt møder hinanden osv.<br><br><strong>Drift og vedligehold</strong><br>Skabe sammenhæng mellem alsidige rumligheder og vedligehold - hvis eksempelvis alle kantzoner skabes af beplantning/ skure etc. kræves der måske mere pleje og vedligehold end hvis bygningens udlæg er med til at understøtte møder på tværs.<br>\n\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Øge sammenhørigheden i bebyggelsen på tværs af beboergrupper. Bekæmpe ensomhed.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">At styrke forståelsen af, at det er i fællesskab vi kan gøre den største forskel.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">At det er lettere at dele og værne om bygninger og udearealer i et stærkt naboskab.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\"></div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "02",
+                      "title": "Plads til forskellighed - frivilligt engagement",
+                      "longFormTitle": "Plads til forskellighed - frivilligt engagement",
+                      "sortOrder": 1,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 17)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=17"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Planudsnit / fotodokumentation, og beskrivelser i tekst."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "02.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er arbejdet med mødesteder af forskellig art og skala.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "+ Derudover er der er etableret mødesteder specifikt for forskellige aldersgrupper/ interesser og i forskellige skalaer.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Der er lavet mindst 3 forskellige mødesteder/ zoner til forskellige brugergrupper og arbejdet med en bred palet af overgange:<br>privat - semiprivat - til fælles for beboerne - til offentligt. ",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nPlanlagte sociale aktiviteter kan etableres indendørs. Planlagte aktiviteter i en boligafdeling kan f.eks. være: fælleslokale, værksted, byttecentral osv. Planlagte sociale aktiviteter kan med fordel tænkes bredt, så der er noget for alle aldersgrupper og aktiviteterne repræsenterer forskellige interesser. Planlagte sociale aktiviteter har altså en anden karakter end det naturlige møde under pkt. 1. <br>Hvilke aktiviteter og hvor skal de placeres for at gøre det attraktivt for beboerne at bruge dem?<br>Ligger de planlagte aktiviteter bedst i stueetagen, tæt ved ankomsten eller i selvstændige bygninger i forbindelse med udearealer?<br><br><strong>Arkitektonisk kvalitet</strong><br>Kan aktiviteterne være med til at skabe en særlig identitet i bebyggelsen?<br>Fremhæves de sociale aktiviteter igennem et særligt arkitektonisk sprog eller byggemateriale?<br><br><strong>Drift og vedligehold</strong><br>Er der fordele ved at integrere aktivitetsrum i den øvrige bebyggelse, eksempelsvis ift. hærværkog udefrakommende?<br>Er der fordele ved at de ligger selvstændigt som en del af udearealernes driftsplan?<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">At skabe rum der tiltrækker og rummer forskelligheden og giver plads til at kunne være sig selv og mødes på tværs.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Øge forståelse for forskellighed og derved opnå større tolerance generelt.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Valg af dyrknings og biodivers beplantningsstrategi der fremmer fællesskab ved at initiere frivilligt plejeog engagement.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Øget biofaktor lokalt bidrager globalt.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "03",
+                      "title": "Aktivitetsbaserede møder - indendørs",
+                      "longFormTitle": "Aktivitetsbaserede møder - indendørs",
+                      "sortOrder": 2,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 18)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=18"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Planudsnit / fotodokumentation, og beskrivelser i tekst."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Derudover areal beregninger<br>Antal boliger fastlægges."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Arealønske i både niveau 1, 2 og 3:<br>op t.o.m. 20 boliger: 50 m²<br>21-50 boliger: 100 m²<br> mere end 50 boliger: 100 m² + 1 m² / bolig."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "03.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er etableret en planlagt aktivitet for beboerne.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Der er etableret aktiviteter for forskellige beboere med hensyn til f.eks. aldersgrupper, interesser, aktive og stillesiddende aktiviteter osv.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Der etableres mindst 3 forskellige planlagt aktiviteter til beboerne, samt opholdssteder med forskellig stemning og karakter.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nPlanlagte sociale aktiviteter kan etableres indendørs. Planlagte aktiviteter i en boligafdeling kan f.eks. være: fælleslokale, værksted, byttecentral osv. Planlagte sociale aktiviteter kan med fordel tænkes bredt, så der er noget for alle aldersgrupper og aktiviteterne repræsenterer forskellige interesser.<br>Planlagte sociale aktiviteter har altså en anden karakter end det naturlige møde under pkt. 1.<br>Hvilke aktiviteter og hvor skal de placeres for at gøre det attraktivt for beboerne at bruge dem?<br>Ligger de planlagte aktiviteter bedst i stueetagen, tæt ved ankomsten eller i selvstændige bygninger i forbindelse med udearealer?<br><br><strong>Arkitektonisk kvalitet</strong><br>Kan aktiviteterne være med til at skabe en særlig identitet i bebyggelsen?<br>Fremhæves de sociale aktiviteter igennem et særligt arkitektonisk sprog eller byggemateriale?<br><br><strong>Drift og vedligehold</strong><br>Er der fordele ved at integrere aktivitetsrum i den øvrige bebyggelse, eksempelsvis ift. hærværk og udefrakommende? Er der fordele ved at de ligger selvstændigt som en del af udearealernes driftsplan?<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Følelsen af hjemlighed udover egen bolig. Fællesaktiviteter styrker følelsen af ejerskab og skaber forankring der hvor man bor.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\"></div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Øge muligheden for at dele, og derved forbruge mindre C0<sup>2</sub>.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\"></div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "04",
+                      "title": "Aktivitetsbaserede møder - udendørs",
+                      "longFormTitle": "Aktivitetsbaserede møder - udendørs",
+                      "sortOrder": 3,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 19)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=19"
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "04.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er etableret udendørs aktiviteter.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Der er godt placeret udendørs mødesteder med udgangspunkt i beboernes behov, steder til ophold og der arbejdes med forskellige stemninger i uderummene.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Der er etableret min. 3 forskellige tilbud til forskellige beboer-/aldersgrupper. Uderummene arbejder med forskellige stemning, skala og årstidernes skiften. Uderum er tænkt sammen med omgivelserne/ byen omkring.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nGode uderum er vigtige for oplevelsen af fællesskab i boligafdelingen, og for muligheden for at lære sine naboer at kende. Gode uderum indeholder både grønne elementer og invitationer til udeliv. Det kan være aktiviteter som legeplads, bevægelse f.eks. foldspil, spise/grill område, nyttehaver mv. Ideelt vil uderum i en bebyggelse tilbyde forskellige typer af ophold i forhold til stemning, beplantning, intime rum/ mere åbne arealer osv. Uderum bør samtænkes med ”det naturlige møde” i fokuspunkt 01, så man f.eks. anvender de naturlige ganglinjer i hverdagen i forhold til uderummenes design.<br><br><strong>Arkitektonisk kvalitet</strong><br>Uderummenes design, organisering og stemning vil skabe basis for udelivet i boligområdet. Smukke uderum kan være til daglig glæde og stolthed for beboere. <br><br><strong>Drift og vedligehold</strong><br> Overvej hvordan ovenstående plejes og hvad forskellige scenarier og helhedsgreb kan have af indflydelse på driften<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">At fremme sociale møder og fællesskaber på tværs i bebyggelsen.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">At styrke forståelsen af at vi indgår i større fællesskaber.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">At skabe sammenhæng med det omkringliggende kvarter/ steds mennesker, eksisterende beplantninger og arter.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Gode uderum/ små og kompakte - footprint til menneskelig aktivitet er mindre.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "05",
+                      "title": "Attraktive stueetager + kantzoner",
+                      "longFormTitle": "Attraktive stueetager + kantzoner",
+                      "sortOrder": 4,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 20)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=20"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Planudsnit / fotodokumentation, og beskrivelser i tekst."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "05.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Mindst 65 % af stueetagen er ”aktiv” målt i facademeter på primære bygninger. Skure og andre små bygninger er undtaget.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "+ Derudover er der arbejdet med kantzonen. Den er udformet, så den danner en god overgang ml. bygning og uderum.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Mindst 80 % af stueetagen er ”aktiv” (målt i facademeter), og der er arbejdet med kantzoner til både ophold og som god overgang mellem inde og ude.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nBoligområder skal være rare, trygge og inviterende at bevæge sig i. I den forbindelse er stueetagen og dens facade ud mod særlig de fælles uderum og gade af stor betydning. Stueetagen kan bidrage positivt igennem gode vinduesåbninger og overvejende en form for aktiv funktion. Aktive funktioner er, hvor der opholder sig mennesker i længere tid ad gangen f.eks. boliger, fællesarealer, beboercafé, ejendomskontor, indgangspartier etc. Depotrum, lukkede facader, parkeringsdæk, cykelparkering mv. er ikke aktive. Boligstuetage med meget små vinduer eller kun vindue til f.eks. badeværelse er heller ikke aktive.<br> Kantzonen som overgang mellem bygning og uderum er vigtig og den bør designes omsorgsfuldt. Hvis der er plads og mulighed kan kantzonen laves til et privat opholdsareal. En tommelfingerregel: <i>”livet starter i rummets kant”</i> og dette betyder at en attraktive kantzone inviterer til at uderummet bliver aktivt. Placering af indgangsdøre indgår i det strategiske arbejde med stueetager og kantzoner <br><br><strong>Arkitektonisk kvalitet</strong><br> Stueetagen og kantzonen er centralt for bebyggelsens og bygningens arkitektoniske kvalitet og design.<br><br><strong>Drift og vedligehold</strong><br>Ansvar for drift og vedligehold af kantzone skal afklares<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">At skabe attraktive zoner og programmer der kan bidrage til fællesskab og naturlige møder og ophold i bebyggelsen.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Lokale fællesskaber øger forståelsen for styrken af globale fællesskaber.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Grønne kantzoner øger biofaktoren for området.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Øget biofaktor lokalt bidrager globalt.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "06",
+                      "title": "Solorientering og behagelig mikroklima",
+                      "longFormTitle": "Solorientering og behagelig mikroklima",
+                      "sortOrder": 5,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 21)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=21"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Diagrammer, evt. fotodokumentation, og beskrivelser i tekst."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Sol og vindstudier + eftervisning af udendørs mikroklima Planudsnit, beskrivelser."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Planudsnit, situationsplan, beskrivelser."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "06.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Alle boliger har adgang til mindst 2 forskellige solorienteringer. Privateog fællesopholdsarealer inde og ude har gode dagslysforhold.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Alle boliger er gennemlyste og der er sikret udendørs ophold med sol og behageligt mikroklima over døgnet og året.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "+ Derudover findes der udendørs både gode forår/sommer/efterårs opholdssteder og der er adgang til min. 2 af følgende; formiddags-, eftermiddags- og aftensol.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nSolorientering er afgørende for både boligernes indendørs kvalitet og mulighed for ophold i uderum. Udendørs er det mikroklimaet i det hele taget, der er afgørende dvs. både solforhold, vind/læ og støj – hvis ikke mikroklimaet er behageligt i uderummene, så vil de fællesskabsorienterede tiltag (fokuspunkt 1-4) ikke blive en succes. Mikroklima skal indtænkes allerede i helhedsgrebet, så bebyggelsen/ bygningen organiseres således at flest mulige boliger, uderum og fælles opholdsarealer ligger godt ift. solorientering og mikroklima.<br><br>Se også fokuspunkt: 12, 13 og 16.<br><br><strong>Arkitektonisk kvalitet</strong><br>Solorientering, mikroklima + konteksten, er med til at bestemme og præge projektets hovedgreb og derved de helt indledende arkitektoniske motiver. Jo mere sol jo bedre en bebyggelse set ud fra bokvalitet.<br><br><strong>Drift og vedligehold</strong><br>Overvej hvilke sekundære funktioner + materialevalg og placering ift. solorientering.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Mikroklima og sol er forudsætning for udeliv og derved styrkelse af fællesskabet i bebyggelsen.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">At styrke forståelsen af at vi indgår i større fællesskaber.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">En optimal solorientering er med til at sænke energiforbrug i bebyggelsen.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Nedsat energiforbrug lokal har indvirkning globalt.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "07",
+                      "title": "Indblik - udsigt",
+                      "longFormTitle": "Indblik - udsigt",
+                      "sortOrder": 6,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 22)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=22"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Planudsnit / evt. fotodokumentation, og beskrivelser i tekst."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Plan som indikerer indbliksmuligheder og udsyn især til fællesarealer."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Beskrivelser, evt. formuleret koncept."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "07.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er udviklet et koncept til inblik og udsigt som følges i de fleste boliger (særlig fokus på boliger i stueetagen).",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Der arbejdes med private zoner for at reducere indbliksgener. Udkig er etableret til at understøtte fællesskabet og tryghed.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Derudover er der udviklet et arkitektonisk motiv og der anvendes særlige bygningsdele/elementer.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nIndblik og udsigt, er en opmærksomhed der både skal arbejdes med i den store og i den nære skala. Vi vil gerne kigge ud, men også skærme privatlivet.<br>På hovegrebsniveau skal der tages stilling til hvordan bebyggelsens boliger får mest muligt lys, og indblik/ udsigt balanceres. Arbejdet med udsigter og boligens relation til det omkringliggende spiller både en rolle ift. boligens herlighedsværdi men kan også have indflydelse på hvordan uderummene bruges. Relationen mellem bolig og uderum kan både skabe tryghed, men afgørende er det, at der arbejdes med facadens åbenhed/ lukkethed så boligen ikke ”domesticerer” uderummet og beboerne føler sig overvåget. <br><br><strong>Arkitektonisk kvalitet</strong><br>Kan der arbejdes karnapper/ vinduessætninger der styrker bebyggelsens udtryk og arkitektur der samtidig værner om indblik og udsigt? <br><br><strong>Drift og vedligehold</strong><br>Ovenstående kan kræve øget vedligehold derfor bør det overvejes hvordan og om bygningskroppen i sig selv kan være med til at understøtte ovenstående.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Udsyn/ “øjne på uderum” øger trygheden i bebyggelsen.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Forudsætningen for et godt naboskab er både at kunne se hinanden og have privatliv samtidig med.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Fokus på beplantning øger biofaktoren og skaber en visuel herlighedsværdi.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Lokal øget biofaktor har også effekt globalt set.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "08",
+                      "title": "Tryghed",
+                      "longFormTitle": "Tryghed",
+                      "sortOrder": 7,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 23)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=23"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Beskrivelser i tekst."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Planudsnit / situationsplan, beskrivelser, evt. fotodokumentation."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Planudsnit, situationsplan, beskrivelser."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "08.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er formuleret et koncept til tryghed i udendørsområderne.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Der er både udkig og godt overblik i udendørsområder og øvrige fællesadgangsveje i bebyggelsen.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Der er arbejdet strategisk med belysning og mindst et andet særlig tiltag til at øge tryghed i bebyggelsen (f.eks. tekniske tiltag eller tiltag som reducerer hærværk).",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nBebyggelsen og det omkringliggende samtænkes med henblik på at skabe et trygt sted for beboerne. Denne opmærksomhed indtænkes i den store skala ift. bebyggelsens disponering og åbenhed samt i den mere nære skala ift. ankomstrum, belysning, infrastruktur både for hård og blød trafik. Koblingen til det omkringliggende kvarter og kontekst kan spille en rolle ift. at skabe sammenhæng, bevægelser og derved liv der er med til at skabe tryghed. Vær opmærksom på hvordan der kan arbejdes med naturlig overvågning - ”Øjne i gaden” der kan være med til at skabe tryghed – hvis udeområderne kan ses fra boligerne, øges trygheden.<br><br><strong>Arkitektonisk kvalitet</strong><br>Hvis vi befinder os godt i vores omgivelser, føler vi os mere hjemme og derved mere trygge og forankret.<br><br><strong>Drift og vedligehold</strong><br> Jo mere beboerne føler ejerskab jo mere passer de på bebeyggelsen og udearelaerne. Jo mere ejerskab jo mindre hærværk.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Tryghed styrker beboernes tilhørsforhold, skabe god adfærd og brug af fælles faciliteter ude og inde.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Tryghed lokalt har indflydelse globalt.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Et bevidst tryghedsfremmende samspil med konteksten kan skabe synergi, sammehænge der øger den sociale forankring i og for bebyggelsen.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Tryghed og ejerskab mindsker hærværk og derved mindre materialeforbrug.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "09",
+                      "title": "Historisk + kulturel værdi",
+                      "longFormTitle": "Historisk + kulturel værdi",
+                      "sortOrder": 8,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 24)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=24"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Planudsnit / evt. fotodokumentation, og beskrivelser i tekst."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "09.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er arbejdet med fortællinger om stedet i bebyggelsen.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Der findes kulturelle værdier som er fremhævet i bebyggelsen og som aktivt anvendes til at danne et narrativ om bebyggelsen.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Derudover er der taget hensyn til særlige materialer og elementer i forskellige skalaer som understøtter narrativet om beyggelsen (“proviniens”).",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nFindes der træk i umiddelbar nærhed af grunden der kan bygges videre på og i samspil med?<br> Det kan være et særligt kvarter, en særlig historie, facadetakter, materialer, farver, forbindelser, beplantning, noget der der kan trækkes med ind og arbejdes videre med, for at styrke sammenhængen og forankringen til stedets iboende kvaliteter. Det gør sig ikke kun gældende for historiske elementer fra ældre bygninger, nyere islæt er lige så betydningsfulde.<br> Arbejd med historisk/ kulturelle kvaliteter som udgangspunkt for bebyggelsen og dens arkitektur. Er der tale om nedrivning eller delvis transformation bør materialer og bygningsdele genbruges, hvis muligt.<br><br><strong>Arkitektonisk kvalitet</strong><br> Er der særlige takter og et arkitektonisk sprog i det stedslige, der kan arbejdes videre med i både den store skala og den mere nære bygningmæssige skala? Kan der skabes et særligt formæssigt sprog og slægtskab til konteksten der kan være med til at bidrage til projektets arkitektur? <br><br><strong>Drift og vedligehold</strong><br>En velforankret bebyggelse af høj arkitektonisk kvalitet bliver sandsynligvis passet bedre på af beboere og forbipasserende<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Dyrke den lokale historie og kultur til at skabe forankring.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">En lokal forankring skaber forståelse for globale sammenhænge.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Lokalhistorie og kvaliteter skaber tilhørsforhold.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">En lokal forankret arkitektur tager hensyn til klima og miljø.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "10",
+                      "title": "Stedets værdi/ byggeriets kontekst",
+                      "longFormTitle": "Stedets værdi/ byggeriets kontekst",
+                      "sortOrder": 9,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 25)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=25"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Planudsnit / evt. fotodokumentation, og beskrivelser i tekst."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Opstalter og situationsplaner, andet tegningsmaterialer der dokumenterer bygningdele og samspil med det omkringliggende."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "10.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er arbejdet med konteksten og det omkringliggnde i udviklingen af de arkitektoniske greb.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Der er udarbejdet og fremhvævet stedslige kvaliteter baseret på bygningens kontekst i både udeareler og mindst en bygningsdel.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Derudover er der arbejdet med forskellige skalae og bebyggelsen understøtter og stærker konteksten i dens udformning og karaktertræk.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nHvordan bringes et steds eksisterende kvaliteter i spil? Og er der overhovedet nogen? Når man bygger er det afgørende, at det nye byggeri forholder sig til det omkringliggende og søger at skabe sammenhæng til eksisterende og stedslige kvaliteter både i den store og nære skala. Kan samspillet med et eksisterende byggeri, stiforbindelse eller beplantning være med til, at pege på hvor man skal bygge, set i den store skala?<br>Er de eksisterende kvaliteter svære at få øje på, er det måske afsættet for det nye byggeri, at være det der forandrer og skaber en kvalitet er der rækker udover sig selv.<br><br><strong>Arkitektonisk kvalitet</strong><br>Vær opmærksom på hvordan projektet kan understøtte de stedslige kvaliteter både de byggede og de groede. Kan læsningen af stedslige kvaliteter eller mangel på samme, være med til at skabe en stærk arkitektur og identitetet for byggeriet?<br><br><strong>Drift og vedligehold</strong><br>En stærk identitet fremmer tilhørsforhold og derved hvordan vi passer på vores omgivelser.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Skabe lokal identitet igennem stedets kvaliteteter.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Synergi og samtænkning skaber større forståelse der vores omverden generelt.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Bruge de grønne + de stedslige bygningsmæssige kvaliteter.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">En lokal forankret arkitektur tager hensyn til klima og miljø.</div>\n</div>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "options": {
+            "hideCodeInReport": true,
+            "hideFromBreadcrumbs": true,
+            "hideFromDocumentTree": true
+          },
+          "type": "theme",
+          "title": "Indeklima, Energi og Miljø",
+          "longFormTitle": "Indeklima, Energi og Miljø",
+          "code": "IEM",
+          "style": {
+            "primaryColor": "#7c9b81",
+            "secondaryColor": "#a3b9a7"
+          },
+          "sortOrder": 1,
+          "items": [
+            {
+              "code": "IEM1",
+              "longFormTitle": "Energi og forbrug",
+              "options": {
+                "hideCodeInReport": true,
+                "hideFromBreadcrumbs": true,
+                "hideFromDocumentTree": true,
+                "criteriaTreeElementTextFormat": ":title:"
+              },
+              "title": "Energi og forbrug",
+              "type": "criterion",
+              "sortOrder": 0,
+              "items": [
+                {
+                  "type": "task-group",
+                  "code": "IEM1.1",
+                  "title": "Energi og forbrug",
+                  "longFormTitle": "Energi og forbrug",
+                  "sortOrder": 0,
+                  "items": [
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "11",
+                      "title": "Energiforsyning",
+                      "longFormTitle": "Energiforsyning",
+                      "sortOrder": 0,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 31)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=31"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Formuleret koncept."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Dertil energiberegninger jf BR (BE) som dokumenterer et mindre forbrug end krav i BR."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Dokumentation for tiltag i det byggede miljø og/eller aktiv indstats (f.eks. monitorering til den enkelte, energiambassadører, informationsdage, konkurrencer mfl.)."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "11.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er udarbejdet et helhedsorienteret koncept til energiforbrug og -forsyning.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Energiforbruget er reduceret i forhold til krav i BR, derudover er der anvendt energi fra vedvarende ressourcer.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Derudover bliver energiforbruget formidlet til beboerne/brugerne og der er en aktiv indsats for at ændre adfærdsrelateret energiforbrug.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nDet betyder noget for miljøet hvilken opvarmningskilde der benyttes, og for brugeren kan det også have en økonomisk konsekvens. Minimeret energiforbrug er godt for både klima og bruger, og kan påvirkes af f.eks. isolering, og orientering ift dagslys. Det er desuden valg der har betydning for komfort, og hvordan et rum opleves og bruges. Beboere og brugere har i deres opførsel påvirkning på energiforbruget.<br><br><strong>Arkitektonisk kvalitet</strong><br>Solpaneler vil være synlige, og skal integreres bedst muligt æstetisk.<br><br><strong>Drift og vedligehold</strong><br>Der er forskel på hvor meget en given løsning kræver, når først det er installeret. F.eks. fjernvarme eller naturgas, her ligger vedligehold udenfor bebyggelsen. Hvorimod solceller er en lokal enhed, som skal serviceres.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Aht. økonomi vil man vælge billigst mulige energiforsyning, og minimere energiforbrug ved isolering, og bevidst orientering ift. dagslys.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Vedvarende energikilder kan minimere forurening, og dermed mindske vandstigning og temperaturændringer, med ændrede dyrkningsmuligheder.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Fjernvarme kan give arbejdspladser i nærområdet, og dermed øget transport.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Ved at benytte vedvarende energikilder mindskes påvirkning af det globale miljø.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "13",
+                      "title": "Dagslys",
+                      "longFormTitle": "Dagslys",
+                      "sortOrder": 1,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 32)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=32"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Beskrivelser i tekst, planudsnit, evt. formuleret koncept."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Dokumentation iht BR<br>argumentation for gode dagslysforhold: der kan f.eks. anvendes daylight autonomy til eftervisning. lysniveauet er mellem 100lux og 2000lux i beboelsesrum i de faktiske brugstimer."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Dokumentation af dagslysforhold på fælles adgangsveje og arealer."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "13.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er arbejdet med dagslys i udviklingen af planløsninger.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Dagslysniveauet og -kvalitet er udviklet tilsvarende funktionerne i de enkelte rum, der lægges særlig vægt på gode dagslysforhold i opholdsrum.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Der er arbejdet med dagslys i såvel boliger som fællesarealer og fællesadgangsveje. Dagslysindfaldet kan styres af brugerne.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nDagslys bestemmer hvordan et rum opleves og bruges. Det har stor betydning hvor dagslyset kommer fra og hvordan det falder ind i rummet. Dagslys kan minimere behov for elektrisk belysning, og dermed spare energi. Dagslys er en vigtig faktor for velbefindende. Passer den måde dagslyset kommer ind på, med det man ønsker at rummene skal bruges til? <br><br><strong>Arkitektonisk kvalitet</strong><br>Dagslys er vigtigt både for oplevelsen indefra i en bygning, og hvordan bygningen fremstår facademæssigt. <br><br><strong>Drift og vedligehold</strong><br>Øget dagslys giver øget mængde vinduer at vedligeholde<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Dagslys er vigtigt for velbefindende.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Dagslys minimerer energiforbrug, og dermed påvirkning af miljø.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Dagslys er en faktor for udsyn og indblik, som skaber tryghed i et område.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Et vindue består af træ, glas og metal. Glas og metal er ressourcetunge materialer ift. miljø og udledning, og mht. knappe ressourcer.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "14",
+                      "title": "Solindstråling + temperaturer",
+                      "longFormTitle": "Solindstråling + temperaturer",
+                      "sortOrder": 2,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 33)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=33"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Planudsnit / evt. fotodokumentation, og beskrivelser i tekst evt simuleringer."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Som før, suppleret af dagslysberegning for udearealer."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Dokumentation for temperaturer i opholdsrum i de faktiske brugstimer."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "14.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Alle beboere har i deres bolig mulighed for mindst 2 timers direkte sollys i bebyggelsen.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Alle beboer har adgang til direkte sollys i deres bolig, der er særig gode lysforhold i fællesarealer, både inde og ude.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Derudover er der mulighed for styring af solindfaldet i boliger og fællesarealer.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nDirekte sol kan være generende på en køkkenbordplade, men på en plads udenfor i læ giver det velvære. Kan alle i bebyggelsen f.eks. få et sted i sol? Solindstråling kan også give forhøjede temperaturer, som om vinteren er positivt, men om sommeren kan opleves ubehageligt. Solen står i forskellige positioner afhængigt af tid på døgnet, og på året, skal bygningen have nogle tiltag der tager hensyn til og udnytter det? F.eks. tagudhæng, eller størrelse og placering af vinduer? <br><br><strong>Arkitektonisk kvalitet</strong><br>Sol giver lys og skygge på facader, som bidrager til at understrege linjer og flader i facade- og bygningskompositionen. Sol giver opholdsmuligheder, som er vigtige i disponering af bebyggelse og hvordan en boligplan tilrettelægges.<br><br><strong>Drift og vedligehold</strong><br>Sol udtørrer materialer, der skal vedligeholdes mere på facader mod syd, til nord kan der være opfugtning og algebelægning. Orientering kan have betydning for hvilke materialer der kan benyttes.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Sol giver lys og varme, og er vigtig, men det er muligheden for at trække sig lidt væk fra direkte solindstråling også.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Ny bebyggelse kan skygge for naboer.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Skyggepåvirkning af uderum, og hermed hvilke muligheder der er for beplantning.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Som beskrevet kan placering ift verdenshjørner påvirke materialers levetid, og dermed hvor ofte de skal udskiftes.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "15",
+                      "title": "Træk, luft og ventilation",
+                      "longFormTitle": "Træk, luft og ventilation",
+                      "sortOrder": 3,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 34)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=34"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Beskrivelser i tekst, planudsnit, evt. formuleret koncept."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Evt opstalter eller andet tegningsmateriale og/eller fotodokumentation."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Dokumentation for anvendelse af naturlig ventilation, evt simulering."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "15.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er arbejdet med naturlig ventilation i udviklingen af planløsninger. Der skal kunne åbnes vinduer til udluftning.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Behovsstyret el. naturlig ventilation er en integret del af arkitekturen og der er udviklet arkitekoniske motiver til installationer.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Derudover er det muligt at anvende naturlig ventilation alene i både boliger og fællesarealer.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nDet er vigtigt for komfort og velbefindende, at der ikke er trækgener i en bolig eller et rum.<br> Friskluftindtag skal placeres under hensyntagen til dette, det vil påvirke muligheden for møblering og ophold. Kan der anvendes naturlig ventilation i projektet? Naturlig el. behovsstyret ventilation giver bedre mulighed for selv at påvirke indeklimaet, men kan også kræve mere af brugeren, at der bliver åbnet tilstrækkeligt for vinduer. Mekanisk ventilation med konstant luftskifte kan give et for tørt indeklima i vinterhalvåret. <br><br><strong>Arkitektonisk kvalitet</strong><br>Ventilation kan påvirke udseende af f.eks. vinduer med friskluftventiler, eller synlige ventilationskanaler i en bolig, eller udenpå bygninger. Ved større bebyggelser kan føringsveje for ventilation fylde anseeligt, der skal sættes plads af, og evt. indarbejdes eller skjules synlige ventilationer på tag.<br><br><strong>Drift og vedligehold</strong><br> Der skal være adgang til installationer, mange meter kanal kræver mere vedligehold. Manglende ventilation kan give fugtproblemer, og dermed risiko for skimmelsvamp.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Bedst mulige ventilation for optimalt indeklima, med varmegenvinding for at spare på forbrug. Støjreduceres mest muligt.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Støj fra udedele på ventilation minimeres.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Visuelt kan store ventilationstårne olign. undgås.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Minimere energi- og materialeforbrug til ventilation</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "16",
+                      "title": "Fugt, åndbar konstruktion",
+                      "longFormTitle": "Fugt, åndbar konstruktion",
+                      "sortOrder": 4,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 35)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=35"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Planudsnit / evt. fotodokumentation, og beskrivelser i tekst evt simuleringer."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Som før, evt. suppleret af beregninger for fugtoptag i buffermaterialer."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Beregninger/simulering som efterviser, evt suppleret med et målekoncept til sikring af at tiltagene faktisk virker."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "16.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er udviklet et koncept for anvendelse af åndbare konstruktioner, indeklima og luftkvalitet (ventilationskoncept).",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Der er kun anvendt åndbare konstruktioner med de dertil oplagte materialer. Der er tænkt over buffermaterialer.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Opbygning af ydervægge, buffermaterialer og ventilationskoncept er.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nVed en åndbar konstruktion er der ingen membraner, fugt indefra trænger gennem facaden og ud, dvs den optages og afgives. Dette minimerer behovet for ventilation, og giver et bedre indeklima.<br>Materialerne er sammensat på en måde, så fugten kan bevæge sig gennem hele konstruktionen, uden at der ophobes fugt i konstruktionen eller indeluften, med deraf følgende problemer.<br>Materialerne fungerer som en buffer, der kan optage og afgive fugt. Isolering af f.eks. træ eller papir kan over et stort volumen transportere fugt. Hvert menneske udleder i gennemsnit 2 liter i døgnet, plus fugt fra madlavning olign. Hvis der er hul i dampspærre i en konventionel konstruktion med træ og mineralsk isolering, vil fugten trænge ind i træet, da mineralsk isolering ikke kan suge fugt. Fugt i træ kan give svampesporer og risiko for skimmelsvamp.<br>En åndbar konstruktion giver et bedre indeklima. Er det muligt at benytte organisk isolering i projektet?<br><br><strong>Arkitektonisk kvalitet</strong><br>Det kræver en detaljeret viden om materialer for at kunne projektere en åndbar konstruktion, en viden som kan have afsmittende effekt på andre valg.<br><br><strong>Drift og vedligehold</strong><br>Mindre risiko for skimmelsvamp.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Indeklimaet er bedre, mindre ventilation.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">I arbejdsprocessen er materialerne mindre skadelige for håndværkere.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Mindre udledning af dampe fra materialer.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">De materialer der benyttes er typisk mere naturlige, uden brug af kemi i udvinding eller produktion.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "17",
+                      "title": "Akustik og støj",
+                      "longFormTitle": "Akustik og støj",
+                      "sortOrder": 5,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 37)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=37"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Beskrivelser i tekstform / koncept."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Kortlægning af støjkilder i boliger og fællesadgangsarealer."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Som før evt suppleret af beregninger/ simulering."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "17.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er udviklet et koncept for “lydmiljøet” i bebyggelsen.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Derudover tages der særlig hensyn til støj fra tekniske anlæg, f.eks. ventilation i boliger og fællesarealer, inde som ude (´f.eks. på tagterrasser eller friarealer med ophold).",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Derudover er der tænkt over støj fra bolig i friarealer ved åbne vinduer eller på altaner, efterklang i gårdmiljø, støj fra eksterne kilder som trafik.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\n Der kan være påvirkning fra lyd, i det enkelte rum, men også i lejlighedsskel, både vandret og lodret. Nogle materialer er bedre til at opsuge lyd, andre reflekterer og kaster lyden ud igen. Støj måles i decibel, og der er grænseværdier. Oftest er det dog også noget med hvordan lyden opleves. Sidder man meget tæt på en konstant støjkilde, eller er det over et døgn i begrænsede intervaller. Ligger der soveværelser lige ud mod affaldsafhentning kl. 6 om morgenen? Trafikstøj? Er akustik indtænkt i byggeriets materialer? <br><br><strong>Arkitektonisk kvalitet</strong><br>Der skal tænkes i støj mellem boliger, og mellem rum i planlægning af bebyggelsen. Lyde fra udendørs opholdssteder skal også tænkes ind i projektet, er det en invitation til at deltage i et fællesskab, eller vil det opleves som generende?<br><br><strong>Drift og vedligehold</strong><br>Nogle materialer kan være optimale ift. lydreduktion, men kræve mere vedligehold. Meget glatte overflader vil f.eks.være dårlige for reduktion af støj, men nemme at vedligeholde.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Der er forskel på hvad nogle beboere vil opleve som hyggelige lyde, og andre som ubehagelig støj. Er der taget højde for at flest muligt har optimale forhold i projektet.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Hvordan er udendørs opholdsrum, afhentning af skrald olign. placeret ift naboer?</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Støj kan som andre elementer være en forurening af nærmiljø</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Kan der ved placering af uderum undgås brug af akustiske materialer, som kan kræve mere vedligehold?</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "18",
+                      "title": "Biodiversitet",
+                      "longFormTitle": "Biodiversitet",
+                      "sortOrder": 6,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 38)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=38"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Beskrivelser i tekst, planudsnit, formuleret koncept."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Som før suppleret med plantelister og redegørelse for relevansen. "
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Som før suppleret med beskrivelse af beboernes ansvar/deltagelse i vedligeholdelse og udvikling af biodiversitet. "
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "18.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er udarbejdet et koncept til biodiversitet for bebyggelsen. biodiversiteten skal altid være øget i forhold til situationen før.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Derudover er der taget hensyn til særligt relevante planter og dyrearter. Øget antal planter ift 1.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Derudover er beboerne en aktiv del i udvikling og vedligholdelse af biodiversitetstiltagene. Øget antal planter ift 2.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nBiodiversitet er vigtig aht bevarelse af bestand af dyr og planter, som alle indgår i individuelt afhængige økosystemer. Mistes arter og levesteder, kan det påvirke velfærd og arbejdspladser.<br>Der skal sættes plads af til biodiversitet, der skal prioriteres plads med gode vækstforhold f.eks, også for små vilde dyr og insekter. Hvordan tænkes det ind ift. bygningers placering, og de uderum der dannes? Biodiversitet kan fordre et andet syn på udenomsarealer, skal det hele være plejet og ensartet, eller kan man vænne sig til mere ’vilde’ områder? Nogle områder kan kræve mere pleje, kunne man engagere beboere? Ved at minimere befæstede arealer og plante forskellige arter, træer, buske, græsser, urter, blomster, bidrages samtidig til at fjerne CO<sub>2</sub> - er der plads til nogle frugttræer, og områder med uplejede græsområder f.eks.?<br><br><strong>Arkitektonisk kvalitet</strong><br>Beplatning, og plads til mange arter skal tænkes ind i projektet, der skal reserveres områder med gode vokseforhold.<br><br><strong>Drift og vedligehold</strong><br>Nogle biodiversitetstiltag kræver mere vedligehold, andre mindre.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Det kan være en daglig glæde at se ting vokse, man kan blive engageret i pasning, og på den måde deltage i fællesskab.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Et bevidst tryghedsfremmende samspil med konteksten kan skabe synergi, sammehænge der øger den sociale forankring i og for bebyggelsen.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Biodiversitet holder sig ikke indenfor afgrænsede områder, det vil smitte af på lokalmiljøet.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Større variation i vækster og arter.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "19",
+                      "title": "Klimatilpasing + LAR (lokal afledning / anvendelse af regnvand)\r",
+                      "longFormTitle": "Klimatilpasing + LAR (lokal afledning / anvendelse af regnvand)\r",
+                      "sortOrder": 7,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 39)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=39"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Planudsnit / evt. fotodokumentation, og beskrivelser i tekst."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Som før, suppleret af situationsplan."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Som før, suppleret af redegørelse for valg af beplantning og opholdsarealer."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "19.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er udviklet et koncept for LAR.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "LAR tiltag er en integreret del af friarealer.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "LAR tiltag tilføjer særlige kvaliteter mht beplantning og biodiversitet såvel som opholdsarealer",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nFremtidige vejrforhold er uforudsigelige, og med store udsving. Der bør planlægges for tilpasning. Vand der ikke ledes væk eller forsinkes i feks regnbede, kan ødelægge meget, og er en spildt ressource. Er der lagt plads ud til forsinkning og lagring af nedbør? Hvordan ledes vand fra bygninger og ud til f.eks. vandbede? Er det åbne kanaler, hvordan er færdsel. Vandbede kan give opholdssteder for små dyr. Lange perioder uden regn skal tænkes ind i beplantning, hvordan kan der opsamles regn til vanding? Skal der vælges mere tørketolerante planter? Det er bedre at håndtere vandmængder lokalt, fremfor at skulle overdimensionere rør mm. <br><br><strong>Arkitektonisk kvalitet</strong><br>Landskabeligt vil håndtering af regnvand være synligt, og kræve plads. Bygninger skal disponeres med tanke for afvanding og hvor vand kan forsinkes og opsamles<br><br><strong>Drift og vedligehold</strong><br>Kanaler for regnvand kan ligge åbent i overfladen, ikke nødvendigvis i rør i jorden. Det vil gøre eftersyn tilgængeligt<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Der skal planlægges så der ikke kan opstå oversvømmelser og vand der står ud over kanten på tagrender</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Problemer med klima løses på egen grund, skubbes ikke videre til andre</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Det er vigtigt at bruge vandet, det er en ressource, som kan give en ny type beplantede områder, beplantninger der kan opsuge og forsinke</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Forsinkning af vandet lokalt afbøder problemer længere væk</div>\n</div>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "options": {
+            "hideCodeInReport": true,
+            "hideFromBreadcrumbs": true,
+            "hideFromDocumentTree": true
+          },
+          "type": "theme",
+          "title": "Materialer",
+          "longFormTitle": "Materialer",
+          "code": "M",
+          "style": {
+            "primaryColor": "#4e6267",
+            "secondaryColor": "#839195"
+          },
+          "sortOrder": 2,
+          "items": [
+            {
+              "code": "M1",
+              "longFormTitle": "CO2 udledning",
+              "options": {
+                "hideCodeInReport": true,
+                "hideFromBreadcrumbs": true,
+                "hideFromDocumentTree": true,
+                "criteriaTreeElementTextFormat": ":title:"
+              },
+              "title": "CO2 udledning",
+              "type": "criterion",
+              "sortOrder": 0,
+              "items": [
+                {
+                  "type": "task-group",
+                  "code": "M1.1",
+                  "title": "CO2 udledning",
+                  "longFormTitle": "CO2 udledning",
+                  "sortOrder": 0,
+                  "items": [
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "20",
+                      "title": "LCA / livscyklusvurdering",
+                      "longFormTitle": "LCA / livscyklusvurdering",
+                      "sortOrder": 0,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 44)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=44"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) LCA jf BR, inkl hotspotanalyse og kort redegørelse for mulige forbedringer.<br>Beregning: www.lcabyg.dk."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Som før, der sandsynliggøres at tiltagene kan gennemføres i projektet og der skal tilrettelægges en proces til implementering i projekteringsforløbet."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Kravet er >2,1kg CO<sub>2</sub>eq/m² år i 2025.<br>Tallet reduceres løbende i takt med at der udgives nye IPCC-rapporter."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "20.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Niveauet for den frivillige bæredygtighedsklasse overholdes ( www. bæredygtighedsklasse.dk ).",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Niveauet for den frivillige bæredygtighedsklasse minus 30% overholdes, udgangspunkt er opstartstidspunkt.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Niveauet for absolut bæredygtighed anses som mål og der er arbejdet aktiv med at nedbrige miljøpåvirkning fra materialer og drift.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nLCA er en metode til at vurdere, hvilke potentielle miljøpåvirkninger og ressourceforbrug der er knyttet til et produkt, lige fra udvinding af råstoffer til bortskaffelse i sidste ende. Hvordan påvirkes miljø ved et givent materiale under udvinding, produktion, transport, byggeri, drift. Hvor meget skal der f.eks. køres, under udvinding, produktion og byggeri? Kan der benyttes lokale materialer? Bruges der meget vand under produktion, byggeri og efterfølgende drift?<br>En livscyklusvurdering giver også mening på andre skalatrin, om bygningen f.eks. på et senere tidspunkt kan benyttes til andre formål og dermed forlænge dens liv? Om boliger kan ændre størrelse uden store ombygninger? <br><br><strong>Arkitektonisk kvalitet</strong><br>For at sikre så langt et liv som muligt i en bygnings liv, må man arbejde med hvordan f.eks. installationer placeres, så der er fleksibilitet.<br><br><strong>Drift og vedligehold</strong><br>I en LCA på materialer indgår drift og vedligehold også i opgørelsen.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Genbrugsmaterialer har meget lave mijøpåvirkninger, lokal høst af materialer kan skabe jobs og reducere affald lokalt.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Et større fokus på miljøvenlige materialer forbedrer sikkerheden og sundhedsaspekter i materialeproduktionen - vi importerer meget og en stigende eftersprøgsel af miljøvenlige materialer kan have en postiv effekt på produktionssteder.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Der kan med fordel vælges produkter/materialer som ikke skal fragtes langt - afsøg dit lokale område for brugbare ressourcer.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\"></div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "21",
+                      "title": "LCC / totaløkonomi",
+                      "longFormTitle": "LCC / totaløkonomi",
+                      "sortOrder": 1,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 45)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=45"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) LCC bereging for alle relevante bygningdele, der anvendes standarden beskrevet i BR."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "21.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "LCC anvendes ved alle økonomiske beslutninger.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Som før, dog lægges der særlig fokus på drift og vedligholdelse ved valg af materialer/installationer.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Som før, grænseværdien for nutidværdien skal være under 20.000kr.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nHvordan ser økonomi ud for et givent materiale i anlæg + drift, materialer vurderes ikke kun efter pris i anlæg. Et materiale kan være billigst i anlæg, men kræve mere i vedligehold, fordi det er af lavere kvalitet og skal udskiftes hurtigere, eller fordi det over tid udvikles på en måde der ikke opleves som positiv patina, men som slid der kræver mere rengøring og udbedring.<br><br><strong>Arkitektonisk kvalitet</strong><br>At se på totaløkonomi giver flere materialer at vælge imellem.<br><br><strong>Drift og vedligehold</strong><br>Nogle materialer som holder over længere tid kræver mere vedligehold, netop for at holde.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Det kan have effekt på husleje at vælge materialer ud fra totaløkonomi, da anlægsfasen bliver dyrere.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Det kan give arbejdspladser lokalt at et materiale kræver mere vedligehold.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Mere vedligehold medfører evt. øget brug af rengøringsmidler som udledes lokalt.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">At vælge materialer der kan holde i længere tid er positivt for effekt på miljø, det betyder at der er længere tid til der igen skal produceres materialer.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "22",
+                      "title": "Design for adskillelse / affaldsforebyggelse",
+                      "longFormTitle": "Design for adskillelse / affaldsforebyggelse",
+                      "sortOrder": 2,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 46)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=46"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Beskrivelse i tekst, evt diagrammer/ principper."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "22.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er formuleret et koncept til DfD ift både vedligehold og udskiftning.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "DfD-konceptet er omsat i projektmaterialet, der er kortlagt materialer i en oversigt ( bygnings-/ materialepas ).",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Derudover er der lavet en undersøgelse efter mulig aftager og/eller kilder for DfD elementer.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\n Ved at materialer kan skilles ad, er det muligt at genbruge dem. Og muligt at komme til evt. defekte bygningsdele eller installationer. Det sikrer at man i materialernes levetid kan udskifte dele af konstruktionen, uden at måtte kassere alt, fordi det ødelægges når man skal ind bagved f.eks. Princippet har stor værdi for drift og vedligehold, at man kan tilgå installationer og evt. defekte materialer. Det er både tidssparende, men også i høj grad materialebesparende.<br>Princippet kaldes på engelsk for Design for Disassembly - DfD<br><br><strong>Arkitektonisk kvalitet</strong><br>Synliggørelse af samlinger kan være et arkitektonisk tema, og være definerende for udformninger<br><br><strong>Drift og vedligehold</strong><br>Det vil lette vedligehold væsentligt, at man over tid enkelt kan udskifte dele og materialer.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Enklere vedligehold.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Inspirere andre til at arbejde med design for adskillelse.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Minimerer spild, man udskifter kun det defekte, og kan affaldssortere.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Sparer byggematerialer.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "23",
+                      "title": "Genbrug af byggematerialer",
+                      "longFormTitle": "Genbrug af byggematerialer",
+                      "sortOrder": 3,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 47)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=47"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Dokumentation for bygningsdelen og oprindelse af materialer, innovationspotentiale vurderes."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "23.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Analyse af genbrugspotentiale.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Der er anvendt genbrugsmaterialer på mindst 2 bygningsdele.\n",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Der er anvendt genbrugsmaterialer på mindst 5 bygningsdele.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nMaterialer der er producerede, har allerede brugt CO<sub>2</sub>, jo længere tid de kan tjene et formål jo bedre. Genbrug sænker CO<sub>2</sub> forbruget for det aktuelle projekt. Er der f.eks. materialer fra nedrivning der kan bruges til et andet formål? Eller bruges igen, hvis facaden f.eks. skal merisoleres, kan det samme facademateriale sættes op uden på den nye isolering? Hvis materialer kan bruges på samme byggeplads er der heller ikke transport. Genbrug giver oftest mere arbejde lokalt på byggepladsen, fremfor på en fabrik et helt andet sted. Ved genbrug har materialerne en iboende historie og patina. Der er en risiko ved genbrug, da man ikke som ved nyproducerede materialer kan forudse og forsikre sig mod hvordan det vil udvikles over tid under påvirkning af brug. EPD findes ikke for mange genbrugte materialer. Det skal afklares hvem der tager ansvaret? Og hvordan man dermed forholder sig til Byggeskadefonden. <br><br><strong>Arkitektonisk kvalitet</strong><br>Genbrug kan tilføre projektet noget stofligt, en uforudsigelighed og et positivt benspænd.<br><br><strong>Drift og vedligehold</strong><br>Det kan være svært at forudse hvor meget vedligehold der er behov for, da man f.eks. ikke har erfaringsbaseret viden fra tilsvarende.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Genbrug af materialer kan give et isæt af noget mindre strømlinet og masseproduceret til projektet, noget mere hyggeligt og håndlavet, i skala mere menneske-nært.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Byggeriet kan inspirere og anvise muligheder for at andre også bygger med genbrugsmaterialer.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Der indsamles byggematerialer tæt på byggepladsen, som så ikke går til spilde.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Sænker CO<sub>2</sub> forbruget.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "24",
+                      "title": "Ansvarlig produktion",
+                      "longFormTitle": "Ansvarlig produktion",
+                      "sortOrder": 4,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 48)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=48"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Kilder/materialernes oprindelse dokumenteres (evt materialepas)."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Derudover dokumenteres mærkninger."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Udsagn eller strategier fra materialeproducenter vedlægges."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "24.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der søges information om, og tages stilling til at anvende materialer fra ansvarlige kilder og som kan dokumenteres.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Materialer følger standarder for etablerede mærkningsordninger indenfor produkt/-materialekategorien.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Derudover dokumenteres materialeproducentens etiske og sociale principper.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nVed valg af materialer er der mange hensyn at tage. F.eks. hvordan og hvor det er produceret, om producenten er opmærksom på at minimere udledning af giftige stoffer, at sikre gode forhold for medarbejdere, ikke belaste miljø og natur, tage hensyn til naboer.<br>Hvordan sikrer man sig, at et givent materiale er produceret ansvarligt? Efterhånden er de fleste producenter opmærksomme på behovet for oplysninger om også denne parameter, og udfærdiger data-ark for materialerne med relevante informationer. Derudover er der mærkningsordninger, f.eks. Svanen, og EU-Blomsten som ser på helhed og den samlede miljøbelastning. For f.eks. træ kan man sikre sig at det er FSC-mærket.<br><br><strong>Arkitektonisk kvalitet</strong><br>Det kan umiddelbart indskrænke mulighederne for materialer, men kan måske også bringe nogle andre materialer frem.<br><br><strong>Drift og vedligehold</strong><br>Fokus på dette punkt vil medføre bedre arbejdsmiljø for medarbejdere i D&V.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Hvis punktet bliver undersøgt, har man viden om, at der er taget mest muligt hensyn i tilblivelsen, at man ikke får en bygning med smukke materialer på bekostning af andre mennesker og miljø.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Tilgodeser medarbejdere der har produceret materialet, ligegyldigt hvor i verden det foregår.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Ved forarbejdning på byggeplads og følgende drift skal der vælges materialer der ikke påvirker f.eks. vandmiljø.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Tilgodeser miljø også der hvor materialet er produceret.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "25",
+                      "title": "Kemiske stoffer / naturlige materialer",
+                      "longFormTitle": "Kemiske stoffer / naturlige materialer",
+                      "sortOrder": 5,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 49)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=49"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Der laves en oversigt over materialer anvendt og som potentielt kan påvirke indeklimaet."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Der dokumenteres at størstedelen af anvendte materialer har fået et etableret mærkat."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Det kortlægges at alle i bygningen anvendte materialer ikke er sundhedsskadelige under indbygning og at der ikke skal anvendes særlige beskyttelsesværn og/eller tidsbegrænsninger for håndtering af materialer."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "25.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der anvendes kun materialer som ikke påvirker indeklimaet negativ. Særligt fokus på VOC ( flygtige organiske forbindelser ).",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Der anvendes etablerede mærkningsordninger for at sikre at alle materialer som anvendes indvendigt ikke er sundhedsskadelige.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Derudover undgås alle materialer som er potentielt sundhedsskadeligt under indbygning og for håndværkerne.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nEn stor del af en sund bolig er hvordan indeklimaet er, det har stor betydning for helbred, både i byggefase og i brug. Dårligt indeklima kan give hovedpine og træthed, og påvirker derved livskvalitet i høj grad Kemiske stoffer bør undgås, pga. afgasning i anlægsfasen og længerevarende effekt i indeklimaet efterfølgende. Nogle kemiske stoffer kender man ikke langtidsvirkninger af. F.eks. er pcb ikke længere tilladt, det blev siden 50’erne brugt i mange byggematerialer, men blev forbudt i 1977. Man kan orientere sig om materialer og deres effekt på indeklima i DIM ( Dansk Indeklima Mærkning ), og mærkningsordninger som f.eks. Svanen og EU-Blomsten. Naturlige materialer kan kræve mere løbende vedligehold for at bevare sine kvaliteter, og vil over tid forandres, men har ofte ikke afgasning i samme grad som kemiske.Også fremtidige materialer, f.eks. maling, skal leve op til samme krav, tilføjes i D&Vplan.<br><br><strong>Arkitektonisk kvalitet</strong><br>Naturlige materialer er at foretrække, men også byggeteknik har betydning, for f.eks. at undgå fugemateriale, lim olign., hvor kemiske stoffer typisk er en bestanddel.<br><br><strong>Drift og vedligehold</strong><br>Valg af naturlige materialer for at undgå mest muligt afgasning kan give øget vedligehold.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Indeklima, arbejdsmiljø i anlægsfase.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Forhold for medarbejdere i produktion.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Forurening, nedsivning.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Forurening i produktion.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "26",
+                      "title": "Stoflighed + patina",
+                      "longFormTitle": "Stoflighed + patina",
+                      "sortOrder": 6,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 50)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=50"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Beskrivelse af materialer og måden der arbejdes med patina som kvalitet dokumentation på hvilke materialer er anvendt hvilke steder."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) D&V-plan."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Beskrives i tekst og evt. referencefotos."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "26.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er udarbejdet et koncept til overflader og dens ældning.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Derudover er der i D&Vplanen beskrevet vedligeholdelse af materialer, og givet ekempler på hvordan de valgte materialer ændrer sig over tid og ved brug.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Derudover er der taget stilling til hvilke kvaliteter de valgte materialer giver for brugerne.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nDer skal tages stilling til overflader, både ud fra drift og vedligehold på længere sigt, og ud fra hvordan et materiale opleves. Stoflighed er bogstaveligt talt fysisk form, dvs det man kan røre ved, det der opfanges af den taktile sansning.<br>Er det noget man er tæt på, en væg, eller opleves det kun langt fra, som f.eks. et loft. Materialer man er tæt på, og i berøring med, f.eks. facader i stueplan, ved indgange, altangange olign. skal være rare at røre ved. Overflader har betydning for hvordan et rum opleves. Patina kan være charmerende, eller det kan opleves som trist slid. Det er meget forskelligt hvordan materialer påvirkes over tid, f.eks. af sollys, eller berøring. Ens indstilling til patina kan påvirkes, skal det altid se ud som om det lige er bygget, eller accepterer man, at tid kan ses, og værdsætter det, fordi det samtidig er en følge af andre kvaliteter i et produkt? <br><br><strong>Arkitektonisk kvalitet</strong><br>Overflader, som er essensen af stoflighed og patina, er væsentligt for hvordan en bebyggelse, et rum opleves. <br><br><strong>Drift og vedligehold</strong><br>Der er stor forskel på hvor meget vedligehold forskellige materialer kræver.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Materialer som opleves behagelige, ikke kolde og glatte.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">En bebyggelse kan tilføre noget til et område, forandres over tid.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Ved at sikre at materialer har et længere liv, falder affaldsmængden der skal håndteres.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Ved at vælge materialer som kan patinere smukt, udskydes udskiftning.</div>\n</div>"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "task",
+                      "valueCalculationStrategy": "count",
+                      "code": "27",
+                      "title": "Begrænsede ressourcer",
+                      "longFormTitle": "Begrænsede ressourcer",
+                      "sortOrder": 7,
+                      "options": {
+                        "breadcrumbTextFormat": ":code: :title:",
+                        "documentTreeFolderTextFormat": ":code: :title:",
+                        "showCodeAsIndicatorTaskViewTitle": false,
+                        "criteriaTreeElementTextFormat": ":code: :title:"
+                      },
+                      "documentation": [
+                        {
+                          "type": "pdf",
+                          "label": "Definition",
+                          "text": "Manual (side 51)",
+                          "url": "https://storage.googleapis.com/custom-css/f7a3e8b2-9c4d-4f1a-8e5c-2d6b9a1c7f3e/B%C3%A6redygtighedsmanual%20-%20Nybyg.pdf?page=51"
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "1) Beskrivelse af konceptet, suppleret med kortlægning af materialer og deres oprindelse."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "2) Materialer beskrives, med fokus på kilde."
+                        },
+                        {
+                          "type": "text",
+                          "label": "Dokumentationskrav",
+                          "text": "3) Beskrives i tekst og illustration."
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "27.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": [
+                              {
+                                "id": "option.0",
+                                "text": "Ingen",
+                                "value": 0
+                              },
+                              {
+                                "id": "option.1",
+                                "text": "Der er taget stillingn til og formuleret et koncept til at reducere ressourceforbrug.",
+                                "value": 1
+                              },
+                              {
+                                "id": "option.2",
+                                "text": "Der anvendes overvejende materialer som stammer fra regenererbare kilder eller genbrugsprodukter.",
+                                "value": 2
+                              },
+                              {
+                                "id": "option.3",
+                                "text": "Der skal være taget stilling til om materialer nemt kan erstattes i fremtiden, ved hjælp af enten det samme eller andre materialer.",
+                                "value": 3
+                              }
+                            ]
+                          },
+                          "options": {
+                            "excludeFromTargets": false
+                          },
+                          "description": "<strong>Beskrivelse</strong>\nNogle materialer fremstilles af begrænsede ressourcer, som f.eks visse metaller, andre af hurtigt regenerende kilder, som f.eks bambus. Generelt er det vigtigt at være opmærksom på ressourceforbrug, at projektere så man optimerer materiale mængden og undgår spild. At vælge materialer med lang levetid, så der ikke skal udskiftes ofte. At vælge lokale materialer. Nogle materialer bruger flere energiressourcer på udvinding, produktion og transport end andre, det kan også være en parameter for valg af materiale. Efterspørgsel på begrænsede ressourcer medfører stigende priser.<br><br><strong>Arkitektonisk kvalitet</strong><br> For at undgå fraskær og dermed spild skal visse materialer f.eks. bruges i et bestemt format. Det vil have betydning for hvordan facaden fremstår. For at undgå materialer af begrænsede ressourcer skal der måske projekteres en anden byggeteknik end ellers tænkt. Det skal også indtænkes hvordan arkiteturen påvirkes hvis materialer erstattes med alternativer i fremtiden. <br><br><strong>Drift og vedligehold</strong><br>Ved brug af begrænsede ressourcer kan det ved fremtidig udbedring og udskiftning af dele vise sig, at materialet ikke længere er tilgængeligt, eller er blevet meget dyrere.<br>\n<hr style=\"margin-top: 20px\" /><h3>Hvordan kan projektet bidrage:</h3>\n<div style=\"display: grid; grid-template-columns: 80px auto; gap: 4px;\">\n<div style=\"padding: 8px; background-color: #f4a582; display: flex; align-items: center; text-align: center\">Lokalt socialt</div>\n<div style=\"padding: 8px;\">Mindst mulige materialeforbrug vil påvirke økonomi positivt for husleje.</div>\n\n<div style=\"padding: 8px; background-color: #92c5de; display: flex; align-items: center; text-align: center\">Verden socialt</div>\n<div style=\"padding: 8px;\">Hvis der bruges færre, og mere lokale materialer, falder prisen.</div>\n\n<div style=\"padding: 8px; background-color: #a6d96a; display: flex; align-items: center; text-align: center\">Lokalt miljø</div>\n<div style=\"padding: 8px;\">Mindre transport af byggematerialer.</div>\n\n<div style=\"padding: 8px; background-color: #d9ef8b; display: flex; align-items: center; text-align: center\">Verden miljø</div>\n<div style=\"padding: 8px;\">Ved ikke at efterspørge begrænsede ressourcer undgås udpining af råstof-forekomster.</div>\n</div>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "manual-uuid",
+  "name": "Manual Name",
+  "shortName": "BDH",
+  "group": "bovest",
+  "description": "Manual description",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "date": "2025-10-10T13:20:51.629Z",
+      "themes": [
+        {
+          "type": "theme",
+          "code": "DS",
+          "title": "Det Sociale",
+          "items": [
+            {
+              "type": "criterion",
+              "code": "DS1",
+              "title": "Livet Mellem Naboer",
+              "items": [
+                {
+                  "type": "task-group",
+                  "code": "DS1.1",
+                  "title": "Livet Mellem Naboer",
+                  "items": [
+                    {
+                      "type": "task",
+                      "code": "01",
+                      "title": "Det naturlige møde - fællesskab og naboskabskultur",
+                      "documentation": [],
+                      "items": [
+                        {
+                          "type": "task-item",
+                          "code": "01.1",
+                          "definition": {
+                            "type": "select-single",
+                            "options": []
+                          },
+                          "text": "<strong>Beskrivelse</strong>..."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
