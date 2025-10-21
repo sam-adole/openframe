@@ -30,11 +30,13 @@ except Exception:
     PDFLIB = "pypdf2"
 
 
-def extract_text_pages(pdf_path):
+def extract_text_pages(pdf_path, manual_meta=None):
     """Return list of text per page."""
     pages = []
     if PDFLIB == "pdfplumber" and pdfplumber is not None:
         with pdfplumber.open(pdf_path) as pdf:
+            if manual_meta:
+                manual_meta["pages"] = pdf.pages
             for p in pdf.pages:
                 pages.append(p.extract_text() or "")
     elif PDFLIB == "pypdf2" and PdfReader is not None:
@@ -52,7 +54,7 @@ def extract_text_pages(pdf_path):
 def parse_manual(pdf_path, manual_meta):
     """Generate the JSON data for one manual."""
     print(f"Parsing {pdf_path} ({PDFLIB})...")
-    pages = [clean_text(p) for p in extract_text_pages(pdf_path)]
+    pages = [clean_text(p) for p in extract_text_pages(pdf_path, manual_meta)]
     theme_pages = find_theme_pages(pages)
     description = extract_description(pages[0]) # Extract from first page
     manual_meta["description"] = description
@@ -114,6 +116,7 @@ def main(input_dir, output_dir):
             "group": "bovest",
             "description": key.title(),
             "url_base": meta["url_base"],
+            "pages": None
         }
 
         data = parse_manual(pdf_path, manual_meta)

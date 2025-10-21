@@ -8,6 +8,9 @@ from pathlib import Path
 import re
 import json
 from datetime import datetime
+import pandas as pd
+import pdfplumber
+
 
 def clean_text(s: str) -> str:
     """Normalize whitespace and fix linebreaks in PDF text."""
@@ -17,6 +20,7 @@ def clean_text(s: str) -> str:
     s = re.sub(r"-\n\s*", "", s)  # remove hyphenated linebreaks
     s = re.sub(r"\n{2,}", "\n\n", s)
     return s.strip()
+
 
 def code_from_title(title: str) -> str:
     """Map theme titles to their codes."""
@@ -29,20 +33,23 @@ def code_from_title(title: str) -> str:
         return "M"
     return "XX"
 
+
 def find_manualen_page(pages, title="Manualen som Værktøj"):
     """
     Find the page number where the given title (default 'Manualen som Værktøj') appears.
-    
+
     Args:
         pages (list[str]): List of text strings, one per page (from pdfplumber/PyPDF2 extraction).
         title (str): Title text to search for (case-insensitive).
-    
+
     Returns:
         int: 1-based page number where the title was found, or -1 if not found.
     """
     # Normalize the target title for fuzzy matching
     title_pattern = re.sub(r"\s+", r"\\s*", title, flags=re.UNICODE)
-    title_pattern = title_pattern.replace("å", "[åa]").replace("æ", "[æa]").replace("ø", "[øo]")
+    title_pattern = (
+        title_pattern.replace("å", "[åa]").replace("æ", "[æa]").replace("ø", "[øo]")
+    )
     regex = re.compile(title_pattern, re.IGNORECASE)
 
     for i, text in enumerate(pages, start=1):
@@ -55,6 +62,7 @@ def find_manualen_page(pages, title="Manualen som Værktøj"):
     print(f"⚠️ Title '{title}' not found in document.")
     return -1
 
+
 def extract_description(text):
     """
     Extracts the meaningful BO-VEST description from a noisy text block,
@@ -62,16 +70,18 @@ def extract_description(text):
     'Tegnestuen Vandkunsten Oktober 2023'.
     """
     # Normalize spaces and line breaks
-    text = text.replace('\n', ' ').strip()
+    text = text.replace("\n", " ").strip()
 
     # Remove repeated letters (e.g., 'TTeeggnneessttuueenn' -> 'Tegnestuen')
-    text = re.sub(r'(\w)\1+', r'\1', text)
+    text = re.sub(r"(\w)\1+", r"\1", text)
 
     # Remove symbols like >>, //, etc.
-    text = re.sub(r'[>/]+', '', text)
+    text = re.sub(r"[>/]+", "", text)
 
     # Find the sentence starting with "BO-VEST" (case-insensitive)
-    match = re.search(r'(BO-?VEST\s+bæredygtighedsmanual[^.]*\.)', text, re.IGNORECASE | re.UNICODE)
+    match = re.search(
+        r"(BO-?VEST\s+bæredygtighedsmanual[^.]*\.)", text, re.IGNORECASE | re.UNICODE
+    )
 
     if match:
         description = match.group(1)
@@ -81,23 +91,24 @@ def extract_description(text):
 
     # Remove unwanted header/footer phrases
     description = re.sub(
-        r'Bæredygtigheds\s*Manual\s*(NYBYG|RENOVERING|SIMPEL\s*SAG)?',
-        '',
+        r"Bæredygtigheds\s*Manual\s*(NYBYG|RENOVERING|SIMPEL\s*SAG)?",
+        "",
         description,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     )
     description = re.sub(
-        r'Tegnestuen\s*Vandkunsten\s*Oktober\s*\d{4}',
-        '',
+        r"Tegnestuen\s*Vandkunsten\s*Oktober\s*\d{4}",
+        "",
         description,
-        flags=re.IGNORECASE
+        flags=re.IGNORECASE,
     )
 
     # Clean up excess spaces
-    description = re.sub(r'\s{2,}', ' ', description).strip()
-    description = description.replace('BO-VEST', 'BO-VEST bæredygtighedsmanual')
+    description = re.sub(r"\s{2,}", " ", description).strip()
+    description = description.replace("BO-VEST", "BO-VEST bæredygtighedsmanual")
 
     return description
+
 
 def find_theme_pages(pages):
     """
@@ -118,7 +129,9 @@ def find_theme_pages(pages):
             break
 
     if manual_page_idx is None:
-        print("⚠️ Could not find 'Manualen som Værktøj' page — scanning first 8 pages as fallback.")
+        print(
+            "⚠️ Could not find 'Manualen som Værktøj' page — scanning first 8 pages as fallback."
+        )
         search_pages = pages[:8]
     else:
         search_pages = [pages[manual_page_idx]]
@@ -129,14 +142,19 @@ def find_theme_pages(pages):
     theme_keywords = {
         "Det Sociale": ["DET SOCIALE"],
         "Indeklima, Energi og Miljø": ["INDEKLIMA", "ENERGI", "MILJØ"],
-        "Materialer": ["MATERIALER"]
+        "Materialer": ["MATERIALER"],
     }
 
     themes = []
     for title, keys in theme_keywords.items():
         if any(k in combined_text for k in keys):
             # Use manual_page_idx + 1 to return 1-based PDF page numbering
-            themes.append({"title": title, "page": (manual_page_idx + 1 if manual_page_idx is not None else 1)})
+            themes.append(
+                {
+                    "title": title,
+                    "page": (manual_page_idx + 1 if manual_page_idx is not None else 1),
+                }
+            )
 
     # --- Step 3: Fallback if none found
     if not themes:
@@ -153,21 +171,18 @@ def find_theme_pages(pages):
 
 # ---------- THEME CONSTRUCTION ----------
 
+
 def build_theme(theme_title):
     """
     Build base theme object with styling and options.
     """
     theme_code = code_from_title(theme_title)
     theme_colors = {
-        "DS": "#d96552",   # Det Sociale
-        "IE": "#81a38b",   # Indeklima, Energi og Miljø
-        "M": "#2c484d",    # Materialer
+        "DS": "#d96552",  # Det Sociale
+        "IE": "#81a38b",  # Indeklima, Energi og Miljø
+        "M": "#2c484d",  # Materialer
     }
-    theme_secondary_colors = {
-        "DS": "#e49386",
-        "IE": "#a3b9a7",
-        "M": "#839195"
-    }
+    theme_secondary_colors = {"DS": "#e49386", "IE": "#a3b9a7", "M": "#839195"}
     primary = theme_colors.get(theme_code, "#000000")
     secondary = theme_secondary_colors.get(theme_code, "#000000")
 
@@ -188,6 +203,7 @@ def build_theme(theme_title):
 
 
 # ---------- CRITERION DETECTION ----------
+
 
 def detect_criteria(text_chunk):
     """
@@ -216,6 +232,72 @@ def detect_criteria(text_chunk):
         possible_criteria.append("")  # fallback
     return possible_criteria
 
+# ---------- TEXT JOINING ----------
+def join_all_texts_as_one(lines: list) -> pd.Series:
+    """
+    Join all non-empty lines into a single string and return as a Pandas Series.
+
+    Parameters
+    ----------
+    lines : list of str
+        List of text lines.
+
+    Returns
+    -------
+    pd.Series
+        Series with a single element containing all joined text.
+    """
+    rows = []
+    buffer = ''
+    for idx, line in enumerate(lines):
+        if line == "" and idx != 0:
+            rows.append(buffer)
+            buffer = ''
+        else:
+            buffer += line.strip()
+    if buffer:
+        rows.append(buffer)
+
+    # Return as a Series
+    return pd.Series(rows)
+
+
+
+# ---------- TABLE EXTRACTION ----------
+
+def extract_table_from_pdf(pages, page_number: int) -> pd.DataFrame | None:
+    """
+    Extracts a table from a specific page of a PDF using pdfplumber.
+    
+    Args:
+        pdf_path (str): Path to the PDF file.
+        page_number (int): Page number to extract the table from (1-indexed).
+        
+    Returns:
+        pd.DataFrame: Extracted table as a DataFrame, or None if no table is found.
+    """
+    page = pages[page_number - 1]
+
+    table = page.extract_table(table_settings={
+        "vertical_strategy": "lines",
+        "horizontal_strategy": "text",
+    })
+    
+    if table:
+        # Use first row as column headers
+        df = pd.DataFrame(table[1:], columns=table[0])
+        if 'dokumentationskrav' not in df.columns or 'krav' not in df.columns or 'niveau' not in df.columns:
+            return df
+        df = df.drop('niveau', axis=1)
+        # convert these columns to strings 'dokumentationskrav', 'krav'
+        df['krav'] = join_all_texts_as_one(df['krav'].tolist())
+        df["dokumentationskrav"] = join_all_texts_as_one(df["dokumentationskrav"].tolist())
+        df.dropna(inplace=True)
+        return df
+    else:
+        return None
+        
+
 
 # ---------- TASK DOCUMENTATION CREATION ----------
 
@@ -224,6 +306,14 @@ def build_documentation(page_number: int, manual_meta) -> list:
     Build the documentation section for a task.
     """
     pdf_url = f"{manual_meta['url_base']}?page={page_number}"
+    table = extract_table_from_pdf(manual_meta["pages"], page_number)
+    documentations = []
+    if table is not None and 'dokumentationskrav' in table.columns:
+        documentations = [
+            {"type": "text", "label": "Dokumentationskrav", "text": f'{idx}) {row.strip()}'}
+            for idx, row in enumerate(table['dokumentationskrav'].tolist(), start=1)
+            if row and str(row).strip()
+        ]
     return [
         {
             "type": "pdf",
@@ -231,19 +321,24 @@ def build_documentation(page_number: int, manual_meta) -> list:
             "text": f"Manual (side {page_number})",
             "url": pdf_url,
         },
-        {
-            "type": "text",
-            "label": "Dokumentationskrav",
-            "text": ""
-        },
+        *documentations,
     ]
+
 
 # ---------- TASK ITEM CREATION ----------
 
-def build_task_item(task_num: str) -> dict:
+def build_task_item(task_num: str, page_number: int, manual_meta) -> dict:
     """
     Build a single task item for a task.
     """
+    table = extract_table_from_pdf(manual_meta["pages"], page_number)
+    options = []
+    if table is not None and 'krav' in table.columns:
+        options = [
+            {"id": f"option.{idx}", "text": f'{idx}) {row.strip()}', "value": idx}
+            for idx, row in enumerate(table['krav'].tolist(), start=1)
+            if row and str(row).strip()
+        ]
     return {
         "type": "task-item",
         "code": f"{task_num}.1",
@@ -251,9 +346,7 @@ def build_task_item(task_num: str) -> dict:
             "type": "select-single",
             "options": [
                 {"id": "option.0", "text": "Ingen", "value": 0},
-                {"id": "option.1", "text": "I tillæg hertil er der attraktive...", "value": 1},
-                {"id": "option.2", "text": "Derudover kan der identificeres mindst 3 invitationer...", "value": 2},
-                {"id": "option.3", "text": "Der etableres mindst 3 forskellige planlagte aktiviteter...", "value": 3},
+                *options
             ],
         },
         "options": {"excludeFromTargets": False},
@@ -264,9 +357,18 @@ def build_task_item(task_num: str) -> dict:
         ),
     }
 
+
 # ---------- TASK CREATION ----------
 
-def build_task(index: int, task_num: str, task_title: str, theme_code: str, manual_meta, page_number: int) -> dict:
+
+def build_task(
+    index: int,
+    task_num: str,
+    task_title: str,
+    theme_code: str,
+    manual_meta,
+    page_number: int,
+) -> dict:
     """
     Build a single task object including documentation and task item.
     """
@@ -284,15 +386,14 @@ def build_task(index: int, task_num: str, task_title: str, theme_code: str, manu
             "criteriaTreeElementTextFormat": ":code: :title:",
         },
         "documentation": build_documentation(page_number, manual_meta),
-        "items": [
-            build_task_item(task_num)
-        ],
+        "items": [build_task_item(task_num, page_number, manual_meta)],
     }
 
 
 # ---------- TASK GROUP BUILDER ----------
 
-def build_task_group(criterion, theme_code, text_chunk, manual_meta, start_page):
+
+def build_task_group(criterion, theme_code, page_texts, manual_meta, start_page):
     """
     Build a task group with multiple tasks for a given criterion (task group name).
 
@@ -316,12 +417,11 @@ def build_task_group(criterion, theme_code, text_chunk, manual_meta, start_page)
 
     # --- Dynamic regex: only match the current criterion name ---
     pattern = re.compile(
-        rf'^{re.escape(criterion)}\s*:\s*\r?\n(?P<task_name>[A-ZÆØÅa-zæøå0-9\s\-\+&/,()]+)(?=\r?\n\d{{1,2}}\b|\r?\nBeskrivelse|\r?\n[A-ZÆØÅ])',
-        re.MULTILINE | re.IGNORECASE
+        rf"^{re.escape(criterion)}\s*:\s*\r?\n(?P<task_name>[A-ZÆØÅa-zæøå0-9\s\-\+&/,()]+)(?=\r?\n\d{{1,2}}\b|\r?\nBeskrivelse|\r?\n[A-ZÆØÅ])",
+        re.MULTILINE | re.IGNORECASE,
     )
 
-
-    matches = pattern.finditer(text_chunk)
+    matches = pattern.finditer(page_texts)
     tasks = []
 
     def clean_task_name(text):
@@ -340,18 +440,15 @@ def build_task_group(criterion, theme_code, text_chunk, manual_meta, start_page)
         title = " ".join([line for line in lines if line != code])
 
         # Create output JSON
-        output = {
-            "code": code,
-            "title": title
-        }
+        output = {"code": code, "title": title}
 
         return output
 
     for match in matches:
         task_name = match.group("task_name").strip()
         output = clean_task_name(task_name)
-        task_name = output['title']
-        task_num = output['code']
+        task_name = output["title"]
+        task_num = output["code"]
         tasks.append((task_num, task_name))
 
     # --- Fallback if no match found ---
@@ -361,13 +458,16 @@ def build_task_group(criterion, theme_code, text_chunk, manual_meta, start_page)
     # --- Build JSON tasks ---
     for idx, (task_num, task_title) in enumerate(tasks):
         page_number = start_page
-        task = build_task(idx, task_num, task_title, theme_code, manual_meta, page_number)
+        task = build_task(
+            idx, task_num, task_title, theme_code, manual_meta, page_number
+        )
         task_group["items"].append(task)
 
     return task_group
 
 
 # ---------- CRITERION BUILDER ----------
+
 
 def build_criterion(criterion, c_idx, theme_code, manual_meta, start_page, pages=None):
     """
@@ -391,13 +491,16 @@ def build_criterion(criterion, c_idx, theme_code, manual_meta, start_page, pages
 
     if pages is not None:
         start_page = 16
-        for page_number, page in enumerate(pages[start_page - 1:], start_page):
-            task_group = build_task_group(criterion, crit_code, page, manual_meta, page_number)
+        for page_number, page in enumerate(pages[start_page - 1 :], start_page):
+            task_group = build_task_group(
+                criterion, crit_code, page, manual_meta, page_number
+            )
             criterion_obj["items"].append(task_group)
     return criterion_obj
 
 
 # ---------- MAIN ENTRY FUNCTION ----------
+
 
 def extract_task_blocks(text_chunk, theme_title, manual_meta, start_page=1, pages=None):
     """
@@ -408,7 +511,9 @@ def extract_task_blocks(text_chunk, theme_title, manual_meta, start_page=1, page
     criteria = detect_criteria(text_chunk)
 
     for c_idx, criterion in enumerate(criteria):
-        criterion_obj = build_criterion(criterion, c_idx, theme_obj["code"], manual_meta, start_page, pages)
+        criterion_obj = build_criterion(
+            criterion, c_idx, theme_obj["code"], manual_meta, start_page, pages
+        )
         theme_obj["items"].append(criterion_obj)
 
     return theme_obj
@@ -430,6 +535,7 @@ def build_json_structure(manual_meta, themes):
         "versions": [version_obj],
     }
     return root
+
 
 def save_json(obj, path):
     """Save a JSON file with UTF-8 and indentation."""
