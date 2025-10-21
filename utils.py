@@ -232,6 +232,7 @@ def detect_criteria(text_chunk):
         possible_criteria.append("")  # fallback
     return possible_criteria
 
+
 # ---------- TEXT JOINING ----------
 def join_all_texts_as_one(lines: list) -> pd.Series:
     """
@@ -248,11 +249,11 @@ def join_all_texts_as_one(lines: list) -> pd.Series:
         Series with a single element containing all joined text.
     """
     rows = []
-    buffer = ''
+    buffer = ""
     for idx, line in enumerate(lines):
         if line == "" and idx != 0:
             rows.append(buffer)
-            buffer = ''
+            buffer = ""
         else:
             buffer += line.strip()
     if buffer:
@@ -262,44 +263,52 @@ def join_all_texts_as_one(lines: list) -> pd.Series:
     return pd.Series(rows)
 
 
-
 # ---------- TABLE EXTRACTION ----------
+
 
 def extract_table_from_pdf(pages, page_number: int) -> pd.DataFrame | None:
     """
     Extracts a table from a specific page of a PDF using pdfplumber.
-    
+
     Args:
         pdf_path (str): Path to the PDF file.
         page_number (int): Page number to extract the table from (1-indexed).
-        
+
     Returns:
         pd.DataFrame: Extracted table as a DataFrame, or None if no table is found.
     """
     page = pages[page_number - 1]
 
-    table = page.extract_table(table_settings={
-        "vertical_strategy": "lines",
-        "horizontal_strategy": "text",
-    })
-    
+    table = page.extract_table(
+        table_settings={
+            "vertical_strategy": "lines",
+            "horizontal_strategy": "text",
+        }
+    )
+
     if table:
         # Use first row as column headers
         df = pd.DataFrame(table[1:], columns=table[0])
-        if 'dokumentationskrav' not in df.columns or 'krav' not in df.columns or 'niveau' not in df.columns:
+        if (
+            "dokumentationskrav" not in df.columns
+            or "krav" not in df.columns
+            or "niveau" not in df.columns
+        ):
             return df
-        df = df.drop('niveau', axis=1)
+        df = df.drop("niveau", axis=1)
         # convert these columns to strings 'dokumentationskrav', 'krav'
-        df['krav'] = join_all_texts_as_one(df['krav'].tolist())
-        df["dokumentationskrav"] = join_all_texts_as_one(df["dokumentationskrav"].tolist())
+        df["krav"] = join_all_texts_as_one(df["krav"].tolist())
+        df["dokumentationskrav"] = join_all_texts_as_one(
+            df["dokumentationskrav"].tolist()
+        )
         df.dropna(inplace=True)
         return df
     else:
         return None
-        
 
 
 # ---------- TASK DOCUMENTATION CREATION ----------
+
 
 def build_documentation(page_number: int, manual_meta) -> list:
     """
@@ -308,10 +317,14 @@ def build_documentation(page_number: int, manual_meta) -> list:
     pdf_url = f"{manual_meta['url_base']}?page={page_number}"
     table = extract_table_from_pdf(manual_meta["pages"], page_number)
     documentations = []
-    if table is not None and 'dokumentationskrav' in table.columns:
+    if table is not None and "dokumentationskrav" in table.columns:
         documentations = [
-            {"type": "text", "label": "Dokumentationskrav", "text": f'{idx}) {row.strip()}'}
-            for idx, row in enumerate(table['dokumentationskrav'].tolist(), start=1)
+            {
+                "type": "text",
+                "label": "Dokumentationskrav",
+                "text": f"{idx}) {row.strip()}",
+            }
+            for idx, row in enumerate(table["dokumentationskrav"].tolist(), start=1)
             if row and str(row).strip()
         ]
     return [
@@ -327,34 +340,41 @@ def build_documentation(page_number: int, manual_meta) -> list:
 
 # ---------- TASK ITEM CREATION ----------
 
+
 def build_task_item(task_num: str, page_number: int, manual_meta) -> dict:
     """
     Build a single task item for a task.
     """
     table = extract_table_from_pdf(manual_meta["pages"], page_number)
     options = []
-    if table is not None and 'krav' in table.columns:
+    if table is not None and "krav" in table.columns:
         options = [
-            {"id": f"option.{idx}", "text": f'{idx}) {row.strip()}', "value": idx}
-            for idx, row in enumerate(table['krav'].tolist(), start=1)
+            {"id": f"option.{idx}", "text": f"{idx}) {row.strip()}", "value": idx}
+            for idx, row in enumerate(table["krav"].tolist(), start=1)
             if row and str(row).strip()
         ]
+    text = manual_meta["pages"][page_number - 1].extract_text_simple()
+    description_matches = re.findall(
+        r"^(?:Beskrivelse|Arkitektonisk kvalitet|Drift og vedligehold)\s*\n([\s\S]*?)(?=\n(?:Beskrivelse|Arkitektonisk kvalitet|Drift og vedligehold|Hvordan kan projektet bidrage:|$))",
+        text,
+        re.MULTILINE,
+    )
+    descriptions = (
+        "<strong>Beskrivelse</strong><br>(P1)"
+        "<br><br><strong>Arkitektonisk kvalitet</strong><br>(P2)"
+        "<br><br><strong>Drift og vedligehold</strong><br>(P3)"
+    )
+    for i, match in enumerate(description_matches, 1):
+        descriptions = descriptions.replace(f"(P{i})", match.strip())
     return {
         "type": "task-item",
         "code": f"{task_num}.1",
         "definition": {
             "type": "select-single",
-            "options": [
-                {"id": "option.0", "text": "Ingen", "value": 0},
-                *options
-            ],
+            "options": [{"id": "option.0", "text": "Ingen", "value": 0}, *options],
         },
         "options": {"excludeFromTargets": False},
-        "text": (
-            "<strong>Beskrivelse</strong><br>(P1)"
-            "<br><br><strong>Arkitektonisk kvalitet</strong><br>(P2)"
-            "<br><br><strong>Drift og vedligehold</strong><br>(P3)"
-        ),
+        "description": descriptions,
     }
 
 
@@ -365,7 +385,6 @@ def build_task(
     index: int,
     task_num: str,
     task_title: str,
-    theme_code: str,
     manual_meta,
     page_number: int,
 ) -> dict:
@@ -458,9 +477,7 @@ def build_task_group(criterion, theme_code, page_texts, manual_meta, start_page)
     # --- Build JSON tasks ---
     for idx, (task_num, task_title) in enumerate(tasks):
         page_number = start_page
-        task = build_task(
-            idx, task_num, task_title, theme_code, manual_meta, page_number
-        )
+        task = build_task(idx, task_num, task_title, manual_meta, page_number)
         task_group["items"].append(task)
 
     return task_group
