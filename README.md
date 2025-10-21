@@ -220,3 +220,51 @@ Each JSON file must conform to the following model:
 └────────────────────┘
 
 ```
+
+## Installation and Running the Script
+
+## 1. Install Python
+
+1. Go to the official Python website: [https://www.python.org/downloads/](https://www.python.org/downloads/)  
+2. Download and install the latest **Python 3.x** version for your operating system.  
+3. During installation, make sure to **check “Add Python to PATH”**.  
+4. Verify installation by opening a terminal and running:
+
+```bash
+python --version
+```
+
+You should get something like
+
+```bash
+Python 3.12.0
+```
+
+## Set Up the Environment with uv
+
+Download uv here: <https://docs.astral.sh/uv/getting-started/installation/>
+
+If uv is your environment manager/runner:
+
+```bash
+# Navigate to your project folder
+cd path/to/your/project
+
+# Initialize or activate uv environment
+uv init
+uv activate
+```
+
+## Install Dependencies
+
+```bash
+uv install -r requirements.txt
+```
+
+## Run the Script
+
+Run your Python script with:
+
+```bash
+uv run parse_manuals.py
+```
