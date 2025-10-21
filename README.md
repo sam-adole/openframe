@@ -39,8 +39,7 @@ This enables BO-VEST’s platform to display and manage manual content digitally
 | `parse_manuals.py`       | Python script that parses all manuals into JSON            |
 | `utils.py`               | Helper functions for extraction, cleaning, and structuring |
 | `schema_example.json`    | Example of the expected JSON format                        |
-| `README.md`              | Setup instructions for running the extraction scripts      |
-| `Task_Understanding.md`  | (This document) Summary of task understanding and scope    |
+| `README.md`              | Summary of task understanding and scope and Setup instructions for running the extraction scripts         |
 
 ---
 
