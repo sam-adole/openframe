@@ -26,7 +26,7 @@ def code_from_title(title: str) -> str:
     if "INDE" in title_upper:
         return "IE"
     if "MATER" in title_upper:
-        return "MA"
+        return "M"
     return "XX"
 
 def find_manualen_page(pages, title="Manualen som Værktøj"):
@@ -150,35 +150,33 @@ def find_theme_pages(pages):
     print(f"✅ Detected {len(themes)} themes from 'Manualen som Værktøj' page:", themes)
     return themes
 
-def extract_task_blocks(text_chunk, theme_title, manual_meta, start_page=1):
+
+# ---------- THEME CONSTRUCTION ----------
+
+def build_theme(theme_title):
     """
-    Build a single theme block according to schema:
-    Theme → Criterion → Task Group → Task → Task Item
-    Uses heuristics to find tasks, fills out required JSON fields.
+    Build base theme object with styling and options.
     """
     theme_code = code_from_title(theme_title)
-    theme_color_dict = {
-        "DS": "#d96552",
-        "IE": "#81a38b",
-        "MA": "#2c484d",
+    theme_colors = {
+        "DS": "#d96552",   # Det Sociale
+        "IE": "#81a38b",   # Indeklima, Energi og Miljø
+        "M": "#2c484d",    # Materialer
     }
-    # make theme color 10% lighter for secondary color
-    # simple approach: increase each RGB component by 10% towards 255
-    # This is a naive approach and may not be perfect for all colors
-    def lighten_color(hex_color, amount=0.1):
-        hex_color = hex_color.lstrip("#")
-        r, g, b = int(hex_color[0:2], 16), int(hex_color[2:4], 16), int(hex_color[4:6], 16)
-        r = int(r + (255 - r) * amount)
-        g = int(g + (255 - g) * amount)
-        b = int(b + (255 - b) * amount)
-        return f"#{r:02x}{g:02x}{b:02x}" 
+    theme_secondary_colors = {
+        "DS": "#e49386",
+        "IE": "#a3b9a7",
+        "M": "#839195"
+    }
+    primary = theme_colors.get(theme_code, "#000000")
+    secondary = theme_secondary_colors.get(theme_code, "#000000")
 
-    theme_obj = {
+    return {
         "type": "theme",
         "code": theme_code,
         "title": theme_title,
         "longFormTitle": theme_title,
-        "style": {"primaryColor": theme_color_dict.get(theme_code, "#000000"), "secondaryColor": lighten_color(theme_color_dict.get(theme_code, "#000000"))},
+        "style": {"primaryColor": primary, "secondaryColor": secondary},
         "sortOrder": 1,
         "options": {
             "hideCodeInReport": True,
@@ -188,124 +186,233 @@ def extract_task_blocks(text_chunk, theme_title, manual_meta, start_page=1):
         "items": [],
     }
 
-    # Criteria detection (simple pattern)
+
+# ---------- CRITERION DETECTION ----------
+
+def detect_criteria(text_chunk):
+    """
+    Detect possible criteria within the given text chunk using keyword matching.
+    Returns a list of criterion names.
+    """
     possible_criteria = []
     for line in text_chunk.split("\n"):
         if any(
             k in line.upper()
             for k in [
-                "LIVET MELLEM",
-                "BYGNINGER",
-                "ENERGI",
-                "SUNDT BYGGERI",
-                "MATERIALER",
+                "LIVET MELLEM NABOER",
+                "BYGNINGER UNDERSTØTTER DET SOCIALE LIV",
+                "STEDETS KVALITET",
+                "ENERGI FORBRUG",
+                "SUND BYGGERI OG INDEKLIMA",
+                "DET GRØNNE",
+                "CO2 UDLEDNING OG",
+                "ANSVARLIGT MATERIALEFORBRUG",
             ]
         ):
             crit = line.strip().split(":")[0]
             if crit not in possible_criteria:
                 possible_criteria.append(crit)
     if not possible_criteria:
-        possible_criteria.append("Livet Mellem Naboer")
+        possible_criteria.append("")  # fallback
+    return possible_criteria
 
-    for c_idx, criterion in enumerate(possible_criteria[:5]):
-        crit_code = f"{theme_code}{c_idx+1}"
-        criterion_obj = {
-            "type": "criterion",
-            "code": crit_code,
-            "title": criterion,
-            "longFormTitle": criterion,
-            "sortOrder": c_idx + 1,
-            "options": {
-                "hideCodeInReport": True,
-                "hideFromBreadcrumbs": True,
-                "hideFromDocumentTree": True,
-                "criteriaTreeElementTextFormat": ":title:",
-            },
-            "items": [],
+
+# ---------- TASK DOCUMENTATION CREATION ----------
+
+def build_documentation(page_number: int, manual_meta) -> list:
+    """
+    Build the documentation section for a task.
+    """
+    pdf_url = f"{manual_meta['url_base']}?page={page_number}"
+    return [
+        {
+            "type": "pdf",
+            "label": "Definition",
+            "text": f"Manual (side {page_number})",
+            "url": pdf_url,
+        },
+        {
+            "type": "text",
+            "label": "Dokumentationskrav",
+            "text": ""
+        },
+    ]
+
+# ---------- TASK ITEM CREATION ----------
+
+def build_task_item(task_num: str) -> dict:
+    """
+    Build a single task item for a task.
+    """
+    return {
+        "type": "task-item",
+        "code": f"{task_num}.1",
+        "definition": {
+            "type": "select-single",
+            "options": [
+                {"id": "option.0", "text": "Ingen", "value": 0},
+                {"id": "option.1", "text": "I tillæg hertil er der attraktive...", "value": 1},
+                {"id": "option.2", "text": "Derudover kan der identificeres mindst 3 invitationer...", "value": 2},
+                {"id": "option.3", "text": "Der etableres mindst 3 forskellige planlagte aktiviteter...", "value": 3},
+            ],
+        },
+        "options": {"excludeFromTargets": False},
+        "text": (
+            "<strong>Beskrivelse</strong><br>(P1)"
+            "<br><br><strong>Arkitektonisk kvalitet</strong><br>(P2)"
+            "<br><br><strong>Drift og vedligehold</strong><br>(P3)"
+        ),
+    }
+
+# ---------- TASK CREATION ----------
+
+def build_task(index: int, task_num: str, task_title: str, theme_code: str, manual_meta, page_number: int) -> dict:
+    """
+    Build a single task object including documentation and task item.
+    """
+    return {
+        "type": "task",
+        "valueCalculationStrategy": "count",
+        "code": task_num,
+        "title": task_title.strip(),
+        "longFormTitle": task_title.strip(),
+        "sortOrder": index,
+        "options": {
+            "breadcrumbTextFormat": ":code: :title:",
+            "documentTreeFolderTextFormat": ":code: :title:",
+            "showCodeAsIndicatorTaskViewTitle": False,
+            "criteriaTreeElementTextFormat": ":code: :title:",
+        },
+        "documentation": build_documentation(page_number, manual_meta),
+        "items": [
+            build_task_item(task_num)
+        ],
+    }
+
+
+# ---------- TASK GROUP BUILDER ----------
+
+def build_task_group(criterion, theme_code, text_chunk, manual_meta, start_page):
+    """
+    Build a task group with multiple tasks for a given criterion (task group name).
+
+    Pattern matched:
+        <criterion>:
+        <task_name>
+
+    Example:
+        LIVET MELLEM NABOER:
+        Attraktive stueetager + kantzoner
+    """
+    tg_code = f"{theme_code}.1"
+    task_group = {
+        "type": "task-group",
+        "code": tg_code,
+        "title": criterion,
+        "longFormTitle": criterion,
+        "sortOrder": 1,
+        "items": [],
+    }
+
+    # --- Dynamic regex: only match the current criterion name ---
+    pattern = re.compile(
+        rf'^{re.escape(criterion)}\s*:\s*\r?\n(?P<task_name>[A-ZÆØÅa-zæøå0-9\s\-\+&/,()]+)(?=\r?\n\d{{1,2}}\b|\r?\nBeskrivelse|\r?\n[A-ZÆØÅ])',
+        re.MULTILINE | re.IGNORECASE
+    )
+
+
+    matches = pattern.finditer(text_chunk)
+    tasks = []
+
+    def clean_task_name(text):
+        # Remove everything from "Beskrivelse" onward
+        index = text.find("Beskrivelse")
+        if index != -1:
+            text = text[:index].strip()
+
+        # Split lines
+        lines = [line.strip() for line in text.splitlines() if line.strip()]
+
+        # Find the code (assume it is a line that is only digits)
+        code = next((line for line in lines if re.fullmatch(r"\d+", line)), None)
+
+        # Build title by joining all lines except the code
+        title = " ".join([line for line in lines if line != code])
+
+        # Create output JSON
+        output = {
+            "code": code,
+            "title": title
         }
 
-        # Task group
-        tg_code = f"{crit_code}.1"
-        task_group = {
-            "type": "task-group",
-            "code": tg_code,
-            "title": criterion,
-            "longFormTitle": criterion,
-            "sortOrder": 1,
-            "items": [],
-        }
+        return output
 
-        # Find tasks (01, 02, 03...) – simplified heuristic
-        tasks = re.findall(r"\b(0?\d{1,2})\b\s*[-–]?\s*(.{5,80})", text_chunk)
-        if not tasks:
-            tasks = [("01", f"{criterion} - Eksempelopgave")]
+    for match in matches:
+        task_name = match.group("task_name").strip()
+        output = clean_task_name(task_name)
+        task_name = output['title']
+        task_num = output['code']
+        tasks.append((task_num, task_name))
 
-        for t_idx, (task_num, task_title) in enumerate(tasks[:10]):
-            task_code = task_num.zfill(2)
-            page_number = start_page + t_idx
-            pdf_url = f"{manual_meta['url_base']}?page={page_number}"
+    # --- Fallback if no match found ---
+    if not tasks:
+        tasks = [("01", f"{criterion} - Eksempelopgave")]
 
-            task = {
-                "type": "task",
-                "valueCalculationStrategy": "count",
-                "code": task_code,
-                "title": task_title.strip(),
-                "longFormTitle": task_title.strip(),
-                "sortOrder": t_idx + 1,
-                "options": {
-                    "breadcrumbTextFormat": ":code: :title:",
-                    "documentTreeFolderTextFormat": ":code: :title:",
-                    "showCodeAsIndicatorTaskViewTitle": False,
-                    "criteriaTreeElementTextFormat": ":code: :title:",
-                },
-                "documentation": [
-                    {
-                        "type": "pdf",
-                        "label": "Definition",
-                        "text": f"Manual (side {page_number})",
-                        "url": pdf_url,
-                    },
-                    {
-                        "type": "text",
-                        "label": "Dokumentationskrav",
-                        "text": "Planudsnit / fotodokumentation, og beskrivelser i tekst",
-                    },
-                ],
-                "items": [
-                    {
-                        "type": "task-item",
-                        "code": f"{task_code}.1",
-                        "definition": {
-                            "type": "select-single",
-                            "options": [
-                                {
-                                    "id": "option.0",
-                                    "text": "Der er etableret 1-2 typer af rumlige situationer...",
-                                    "value": 1,
-                                },
-                                {
-                                    "id": "option.1",
-                                    "text": "I tillæg hertil er der attraktive og inviterende stueetager...",
-                                    "value": 2,
-                                },
-                                {
-                                    "id": "option.2",
-                                    "text": "Derudover kan der identificeres mindst 3 invitationer...",
-                                    "value": 3,
-                                },
-                            ],
-                        },
-                        "options": {"excludeFromTargets": False},
-                        "text": "<strong>Beskrivelse</strong>\n(Extracted description)",
-                    }
-                ],
-            }
-            task_group["items"].append(task)
+    # --- Build JSON tasks ---
+    for idx, (task_num, task_title) in enumerate(tasks):
+        page_number = start_page
+        task = build_task(idx, task_num, task_title, theme_code, manual_meta, page_number)
+        task_group["items"].append(task)
 
-        criterion_obj["items"].append(task_group)
+    return task_group
+
+
+# ---------- CRITERION BUILDER ----------
+
+def build_criterion(criterion, c_idx, theme_code, manual_meta, start_page, pages=None):
+    """
+    Build a criterion object with one task group and its tasks.
+    """
+    crit_code = f"{theme_code}{c_idx+1}"
+    criterion_obj = {
+        "type": "criterion",
+        "code": crit_code,
+        "title": criterion,
+        "longFormTitle": criterion,
+        "sortOrder": c_idx,
+        "options": {
+            "hideCodeInReport": True,
+            "hideFromBreadcrumbs": True,
+            "hideFromDocumentTree": True,
+            "criteriaTreeElementTextFormat": ":title:",
+        },
+        "items": [],
+    }
+
+    if pages is not None:
+        start_page = 16
+        for page_number, page in enumerate(pages[start_page - 1:], start_page):
+            task_group = build_task_group(criterion, crit_code, page, manual_meta, page_number)
+            criterion_obj["items"].append(task_group)
+    return criterion_obj
+
+
+# ---------- MAIN ENTRY FUNCTION ----------
+
+def extract_task_blocks(text_chunk, theme_title, manual_meta, start_page=1, pages=None):
+    """
+    Master function that orchestrates the building of:
+    Theme → Criterion → Task Group → Task → Task Item
+    """
+    theme_obj = build_theme(theme_title)
+    criteria = detect_criteria(text_chunk)
+
+    for c_idx, criterion in enumerate(criteria):
+        criterion_obj = build_criterion(criterion, c_idx, theme_obj["code"], manual_meta, start_page, pages)
         theme_obj["items"].append(criterion_obj)
 
     return theme_obj
+
 
 def build_json_structure(manual_meta, themes):
     """Construct full JSON file according to provided schema."""

@@ -62,7 +62,7 @@ def parse_manual(pdf_path, manual_meta):
         theme_title = t["title"]
         start_page = t["page"] + 1
         chunk = "\n\n".join(pages[start_page : start_page + 40])
-        theme_obj = extract_task_blocks(chunk, theme_title, manual_meta, start_page)
+        theme_obj = extract_task_blocks(chunk, theme_title, manual_meta, start_page, pages)
         theme_obj["sortOrder"] = t_idx + 1
         themes.append(theme_obj)
 
