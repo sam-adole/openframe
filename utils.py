@@ -412,7 +412,7 @@ def build_task(
 # ---------- TASK GROUP BUILDER ----------
 
 
-def build_task_group(criterion, theme_code, page_texts, manual_meta, start_page):
+def build_task_group(index, criterion, theme_code, page_texts, manual_meta, start_page):
     """
     Build a task group with multiple tasks for a given criterion (task group name).
 
@@ -430,7 +430,7 @@ def build_task_group(criterion, theme_code, page_texts, manual_meta, start_page)
         "code": tg_code,
         "title": criterion,
         "longFormTitle": criterion,
-        "sortOrder": 1,
+        "sortOrder": index,
         "items": [],
     }
 
@@ -508,11 +508,13 @@ def build_criterion(criterion, c_idx, theme_code, manual_meta, start_page, pages
 
     if pages is not None:
         start_page = 16
+        counter = 0
         for page_number, page in enumerate(pages[start_page - 1 :], start_page):
             task_group = build_task_group(
-                criterion, crit_code, page, manual_meta, page_number
+                counter, criterion, crit_code, page, manual_meta, page_number
             )
             criterion_obj["items"].append(task_group)
+            counter += 1
     return criterion_obj
 
 
