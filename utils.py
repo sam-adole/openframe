@@ -251,11 +251,7 @@ def join_all_texts_as_one(lines: list) -> pd.Series:
     rows = []
     buffer = ""
     for idx, line in enumerate(lines):
-        if line == "" and idx != 0:
-            rows.append(buffer)
-            buffer = ""
-        else:
-            buffer += line.strip()
+        buffer += line.strip() + " "
     if buffer:
         rows.append(buffer)
 
@@ -349,9 +345,9 @@ def build_task_item(task_num: str, page_number: int, manual_meta) -> dict:
     options = []
     if table is not None and "krav" in table.columns:
         options = [
-            {"id": f"option.{idx}", "text": f"{idx}) {row.strip()}", "value": idx}
+            {"id": f"option.{idx}", "text": f"{row.strip()}", "value": idx}
             for idx, row in enumerate(table["krav"].tolist(), start=1)
-            if row and str(row).strip()
+            if row and str(row)
         ]
     text = manual_meta["pages"][page_number - 1].extract_text_simple()
     description_matches = re.findall(
@@ -412,7 +408,7 @@ def build_task(
 # ---------- TASK GROUP BUILDER ----------
 
 
-def build_task_group(index, criterion, theme_code, page_texts, manual_meta, start_page):
+def build_task_group(index, criterion: str, theme_code, page_texts, manual_meta, start_page):
     """
     Build a task group with multiple tasks for a given criterion (task group name).
 
@@ -424,12 +420,12 @@ def build_task_group(index, criterion, theme_code, page_texts, manual_meta, star
         LIVET MELLEM NABOER:
         Attraktive stueetager + kantzoner
     """
-    tg_code = f"{theme_code}.1"
+    tg_code = f"{theme_code}.{index+1}"
     task_group = {
         "type": "task-group",
         "code": tg_code,
-        "title": criterion,
-        "longFormTitle": criterion,
+        "title": criterion.capitalize(),
+        "longFormTitle": criterion.capitalize(),
         "sortOrder": index,
         "items": [],
     }
@@ -470,10 +466,6 @@ def build_task_group(index, criterion, theme_code, page_texts, manual_meta, star
         task_num = output["code"]
         tasks.append((task_num, task_name))
 
-    # --- Fallback if no match found ---
-    if not tasks:
-        tasks = [("01", f"{criterion} - Eksempelopgave")]
-
     # --- Build JSON tasks ---
     for idx, (task_num, task_title) in enumerate(tasks):
         page_number = start_page
@@ -486,7 +478,7 @@ def build_task_group(index, criterion, theme_code, page_texts, manual_meta, star
 # ---------- CRITERION BUILDER ----------
 
 
-def build_criterion(criterion, c_idx, theme_code, manual_meta, start_page, pages=None):
+def build_criterion(criterion: str, c_idx, theme_code, manual_meta, start_page, pages=None):
     """
     Build a criterion object with one task group and its tasks.
     """
@@ -494,8 +486,8 @@ def build_criterion(criterion, c_idx, theme_code, manual_meta, start_page, pages
     criterion_obj = {
         "type": "criterion",
         "code": crit_code,
-        "title": criterion,
-        "longFormTitle": criterion,
+        "title": criterion.capitalize(),
+        "longFormTitle": criterion.capitalize(),
         "sortOrder": c_idx,
         "options": {
             "hideCodeInReport": True,
@@ -513,8 +505,9 @@ def build_criterion(criterion, c_idx, theme_code, manual_meta, start_page, pages
             task_group = build_task_group(
                 counter, criterion, crit_code, page, manual_meta, page_number
             )
-            criterion_obj["items"].append(task_group)
-            counter += 1
+            if len(task_group["items"]) > 0:
+                criterion_obj["items"].append(task_group)
+                counter += 1
     return criterion_obj
 
 
@@ -530,10 +523,12 @@ def extract_task_blocks(text_chunk, theme_title, manual_meta, start_page=1, page
     criteria = detect_criteria(text_chunk)
 
     for c_idx, criterion in enumerate(criteria):
-        criterion_obj = build_criterion(
-            criterion, c_idx, theme_obj["code"], manual_meta, start_page, pages
-        )
-        theme_obj["items"].append(criterion_obj)
+        if criterion:
+            criterion_obj = build_criterion(
+                criterion, c_idx, theme_obj["code"], manual_meta, start_page, pages
+            )
+            if len(criterion_obj["items"]) > 0:
+                theme_obj["items"].append(criterion_obj)
 
     return theme_obj
 
